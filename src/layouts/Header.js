@@ -1,41 +1,46 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Header.css'
+import {Link} from 'react-scroll';
 
 function Header() {
     return (
-        <div className="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Medisure Incinerators</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <div className="header" id="headerid">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <Link className="navbar-brand" style={{cursor:"pointer"}} to="homeid">Medisure Incinerators</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <NavLink class="nav-link active" aria-current="page" to="/">Home</NavLink>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link className="nav-link active" activeClassName="menu_active" aria-current="page" to="homeid">Home</Link>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/">About</NavLink>
+        <li className="nav-item">
+          <Link className="nav-link" activeClassName="menu_active" to="aboutid">About</Link>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/">Services</NavLink>
+        <li className="nav-item">
+          <Link className="nav-link" activeClassName="menu_active" to="serviceid">Services</Link>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/">Documents</NavLink>
+        <li className="nav-item">
+          <Link className="nav-link" activeClassName="menu_active" to="galleryid">Gallery</Link>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/">Contact</NavLink>
+        <li className="nav-item">
+          <Link className="nav-link" activeClassName="menu_active" to="documentid">Documents</Link>
         </li>
-        {/* <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li className="nav-item">
+          <Link className="nav-link" activeClassName="menu_active" to="contactid">Contact</Link>
+        </li>
+        {/* <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li> */}
       </ul>

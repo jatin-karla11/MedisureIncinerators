@@ -1,0 +1,33 @@
+.home{
+    width: 100%;
+}
+.home_image{
+    width: 100%;
+}
+.homeimg{
+    max-width: 100%;
+}
+.home_values{
+    background: lightgray;
+}
+.page_title{
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+}
+.about{
+    background: lightgreen;
+}
+
+.gallery{
+    background: lightpink;
+}
+
+.item_image{
+    padding: 50px;
+}
+.titlehr{
+    width: 5%;
+    margin: 0 auto;
+}
