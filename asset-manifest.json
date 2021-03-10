@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MedisureIncinerators/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/MedisureIncinerators/static/js/main.e9880cef.chunk.js",
+    "main.js.map": "/MedisureIncinerators/static/js/main.e9880cef.chunk.js.map",
+    "runtime-main.js": "/MedisureIncinerators/static/js/runtime-main.6f26d409.js",
+    "runtime-main.js.map": "/MedisureIncinerators/static/js/runtime-main.6f26d409.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/MedisureIncinerators/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.56d72072.chunk.js": "/MedisureIncinerators/static/js/2.56d72072.chunk.js",
+    "static/js/2.56d72072.chunk.js.map": "/MedisureIncinerators/static/js/2.56d72072.chunk.js.map",
+    "static/js/3.c4711aba.chunk.js": "/MedisureIncinerators/static/js/3.c4711aba.chunk.js",
+    "static/js/3.c4711aba.chunk.js.map": "/MedisureIncinerators/static/js/3.c4711aba.chunk.js.map",
+    "index.html": "/MedisureIncinerators/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/MedisureIncinerators/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.ea1455b2.chunk.css.map": "/MedisureIncinerators/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.56d72072.chunk.js.LICENSE.txt": "/MedisureIncinerators/static/js/2.56d72072.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f26d409.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.56d72072.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.e9880cef.chunk.js"
+  ]
+}
