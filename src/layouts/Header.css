@@ -3,6 +3,13 @@
     width: 100%;
     z-index: 1000;
 }
+.medisurelogo{
+    height: 50px;
+    margin-right: 10px;
+}
+.medisure-brand{
+    
+}
 .navbar-brand{
     font-size: 26px !important;
     font-weight: 600 !important;
@@ -26,5 +33,9 @@
     }
     .navbar-brand{
         font-size: 20px !important;
+    }
+    .medisurelogo{
+        height: 30px;
+        margin-right: 5px;
     }
 }

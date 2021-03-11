@@ -30,8 +30,20 @@
     /* background: lightgreen; */
 }
 .services{
-    background: #e9ecef;
+    /* background: #e9ecef; */
+    background: url(./pagesimages/plant1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
 
+}
+.services_content{
+    margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  padding-bottom: 50px;
 }
 .gallery{
     /* background: lightpink; */

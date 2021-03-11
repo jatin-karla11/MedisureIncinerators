@@ -1,13 +1,14 @@
 import React from 'react'
 import Contact from './Contact'
 import './Home.css'
-import homeimg from './homeimg.jpg'
+import homeimg from './pagesimages/homeimg.jpg'
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-import xyz from './xyz.jpg'
+import xyz1 from './pagesimages/plant.jpg'
 import {Link} from 'react-scroll'
 import ValueCard from '../layouts/ValueCard';
+import ServiceCard from '../layouts/ServiceCard';
 
 
 function Home() {
@@ -47,7 +48,14 @@ function Home() {
           <hr className="titlehr"></hr>
           
           </div>
-          <div className="services_content"></div>
+          <div className="services_content">
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.." />
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+          </div>
         </div>
         <div className='gallery' id="galleryid">
             <div className='page_title'>Gallery
@@ -67,16 +75,16 @@ function Home() {
             autoplaySpeed={4000}
           >
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
           </OwlCarousel>
           </div>
@@ -93,16 +101,16 @@ function Home() {
             autoplaySpeed={4000}
           >
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
             <div className='item'>
-              <img className="item_image" src={xyz} alt='' />
+              <img className="item_image" src={xyz1} alt='' />
             </div>
           </OwlCarousel>
           </div>

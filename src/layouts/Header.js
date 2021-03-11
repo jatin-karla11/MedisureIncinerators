@@ -2,13 +2,18 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
 import {Link} from 'react-scroll';
+import bm from './layout images/bm.png'
 
 function Header() {
     return (
         <div className="header" id="headerid">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <Link className="navbar-brand" style={{cursor:"pointer"}} to="homeid">Medisure Incinerators</Link>
+    <Link className="navbar-brand" style={{cursor:"pointer"}} to="homeid">
+      <img className="medisurelogo" src={bm} alt=""/>  
+      <span className="medisure-brand">Medisure Incinerators</span>
+      
+    </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
