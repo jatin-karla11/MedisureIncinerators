@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/MedisureIncinerators/static/css/main.721342e4.chunk.css",
-    "main.js": "/MedisureIncinerators/static/js/main.0c7d85f0.chunk.js",
-    "main.js.map": "/MedisureIncinerators/static/js/main.0c7d85f0.chunk.js.map",
-    "runtime-main.js": "/MedisureIncinerators/static/js/runtime-main.eca45674.js",
-    "runtime-main.js.map": "/MedisureIncinerators/static/js/runtime-main.eca45674.js.map",
+    "main.css": "/MedisureIncinerators/static/css/main.77e4c000.chunk.css",
+    "main.js": "/MedisureIncinerators/static/js/main.7a83d03f.chunk.js",
+    "main.js.map": "/MedisureIncinerators/static/js/main.7a83d03f.chunk.js.map",
+    "runtime-main.js": "/MedisureIncinerators/static/js/runtime-main.085ce482.js",
+    "runtime-main.js.map": "/MedisureIncinerators/static/js/runtime-main.085ce482.js.map",
     "static/css/2.68191865.chunk.css": "/MedisureIncinerators/static/css/2.68191865.chunk.css",
-    "static/js/2.12b180d3.chunk.js": "/MedisureIncinerators/static/js/2.12b180d3.chunk.js",
-    "static/js/2.12b180d3.chunk.js.map": "/MedisureIncinerators/static/js/2.12b180d3.chunk.js.map",
-    "static/js/3.fbc1483c.chunk.js": "/MedisureIncinerators/static/js/3.fbc1483c.chunk.js",
-    "static/js/3.fbc1483c.chunk.js.map": "/MedisureIncinerators/static/js/3.fbc1483c.chunk.js.map",
+    "static/js/2.3446c31c.chunk.js": "/MedisureIncinerators/static/js/2.3446c31c.chunk.js",
+    "static/js/2.3446c31c.chunk.js.map": "/MedisureIncinerators/static/js/2.3446c31c.chunk.js.map",
+    "static/js/3.396428b3.chunk.js": "/MedisureIncinerators/static/js/3.396428b3.chunk.js",
+    "static/js/3.396428b3.chunk.js.map": "/MedisureIncinerators/static/js/3.396428b3.chunk.js.map",
     "index.html": "/MedisureIncinerators/index.html",
     "static/css/2.68191865.chunk.css.map": "/MedisureIncinerators/static/css/2.68191865.chunk.css.map",
-    "static/css/main.721342e4.chunk.css.map": "/MedisureIncinerators/static/css/main.721342e4.chunk.css.map",
-    "static/js/2.12b180d3.chunk.js.LICENSE.txt": "/MedisureIncinerators/static/js/2.12b180d3.chunk.js.LICENSE.txt",
+    "static/css/main.77e4c000.chunk.css.map": "/MedisureIncinerators/static/css/main.77e4c000.chunk.css.map",
+    "static/js/2.3446c31c.chunk.js.LICENSE.txt": "/MedisureIncinerators/static/js/2.3446c31c.chunk.js.LICENSE.txt",
     "static/media/homeimg.8b5faefd.jpg": "/MedisureIncinerators/static/media/homeimg.8b5faefd.jpg",
     "static/media/xyz.a4a8821c.jpg": "/MedisureIncinerators/static/media/xyz.a4a8821c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eca45674.js",
+    "static/js/runtime-main.085ce482.js",
     "static/css/2.68191865.chunk.css",
-    "static/js/2.12b180d3.chunk.js",
-    "static/css/main.721342e4.chunk.css",
-    "static/js/main.0c7d85f0.chunk.js"
+    "static/js/2.3446c31c.chunk.js",
+    "static/css/main.77e4c000.chunk.css",
+    "static/js/main.7a83d03f.chunk.js"
   ]
 }
