@@ -1,5 +1,5 @@
 .footer{
-    background: rgb(206, 204, 204);
+    background: #e9ecef;
     
 }
 .whatsapp_icon {
@@ -28,5 +28,5 @@
     display: flex;
     justify-content: center;
     padding: 30px;
-    background: rgb(177, 175, 175);
+    background: #d9dcdf;
   }
