@@ -1,0 +1,15 @@
+.my-form {
+  color: #305896;
+}
+.my-form .btn-default {
+  background-color: #305896;
+  color: black;
+  border-radius: 0;
+}
+.my-form .btn-default:hover {
+  background-color: #4498c6;
+  color: black;
+}
+.my-form .form-control {
+  border-radius: 0;
+}
