@@ -9,7 +9,7 @@ import xyz1 from './pagesimages/plant.jpg'
 import {Link} from 'react-scroll'
 import ValueCard from '../layouts/ValueCard';
 import ServiceCard from '../layouts/ServiceCard';
-
+import About from './About'
 
 function Home() {
     return (
@@ -33,8 +33,9 @@ function Home() {
         </div>
         <div className='about' id="aboutid">
           <div className="page_title">
-            About Us
-          <hr className="titlehr"></hr>
+           
+            <About />
+         
           </div>
           <div className="about_content">
 
