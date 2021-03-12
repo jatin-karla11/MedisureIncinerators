@@ -10,6 +10,7 @@ import {Link} from 'react-scroll'
 import ValueCard from '../layouts/ValueCard';
 import ServiceCard from '../layouts/ServiceCard';
 import About from './About'
+import bmwpdf from './bmw_rules.pdf'
 
 function Home() {
     return (
@@ -33,12 +34,14 @@ function Home() {
         </div>
         <div className='about' id="aboutid">
           <div className="page_title">
-           
-            <About />
+           About Us
+          <hr className="titlehr"></hr>
+
          
           </div>
           <div className="about_content">
 
+            {/* <About /> */}
             
 
 
@@ -121,7 +124,11 @@ function Home() {
           <hr className="titlehr"></hr>
           
           </div>
-          <div className="documents_content"></div>
+          <div className="documents_content">
+            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div>
+            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"BMW Rules"</a></div>
+            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"Consent Order"</a></div>
+          </div>
         </div>
         <div className='contact' id="contactid">
           <Contact />

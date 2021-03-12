@@ -68,6 +68,31 @@
 .gallery_content_mob{
     display: none;
 }
+.documents{
+    width: 100%;
+    background: #e9ecef;
+
+}
+.documents_content{
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+    padding-bottom: 50px;
+    margin-top: 30px;
+
+}
+.documents_content_pdf{
+    border: 2px solid black;
+    padding: 15px;
+    width: 33%;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact{
+    margin-bottom: 50px;
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
 
     .gallery_content{
@@ -81,5 +106,27 @@
     .titlehr{
         width: 20%;
         margin: 0 auto;
+    }
+    .services{
+        background: #e9ecef;
+        color: black;
+    }
+    .documents_content{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0px auto;
+        padding-bottom: 50px;
+        margin-top: 10px;
+    
+    }
+    .documents_content_pdf{
+        border: 2px solid black;
+        padding: 15px;
+        width: 100%;
+        margin: 0px;
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
     }
 }

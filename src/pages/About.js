@@ -3,10 +3,7 @@ import React from 'react'
 function About() {
     return (
         <div className="conatiner">
-            <div className="  col-md-12" >
-               <h1 style={{textAlign:"center",color:"black"}}>About US</h1> 
-               <hr />
-            </div>
+            
              <div className="row " style={{ display:"flex" ,flexWrap:"wrap",flexDirection:"row",justifyContent: "center"}}>
            <div className="col-md-6" style={{float:"left",justifyContent: "space-between"}}>
            <div className="card " style={{marginLeft:"25%",marginTop:"15%",padding:" 20px",width: "27rem",height:"27rem"}}>
