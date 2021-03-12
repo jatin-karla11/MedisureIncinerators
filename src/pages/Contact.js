@@ -14,17 +14,17 @@ function Contact() {
         <div class="jumbotron"><h1>Contact Us </h1> </div>
             <form className="my-form">
                 <div className="form-group">
-                <i class="fa fa-user icon">  </i>   
+                <i class="fa fa-user icon">  </i>   &nbsp;&nbsp;
                     <label for="form-name">  Name</label>
                     <input type="name" className="form-control" id="form-name" placeholder="Name"/>
                 </div>
                 <div className="form-group">
-                <i class="fa fa-envelope icon">  </i>
+                <i class="fa fa-envelope icon ">  </i> &nbsp;&nbsp;
                     <label for="form-email">Email Address</label>
                     <input type="email" className="form-control" id="form-email" placeholder="Email Address"/>
                 </div>
                 <div className="form-group">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone"></i>&nbsp;&nbsp;
                     <label for="form-subject">Telephone</label>
                     <input type="text" className="form-control" id="form-subject" placeholder="Subject"/>
                 </div>
