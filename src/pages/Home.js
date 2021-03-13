@@ -33,9 +33,17 @@ function Home() {
           </div>
         </div>
         <div className='about' id="aboutid">
+          <div className="page_title">
+           About Us
+          <hr className="titlehr"></hr>
+
+         
+          </div>
           <div className="about_content">
 
             <About />
+            
+
 
           </div>
         </div>

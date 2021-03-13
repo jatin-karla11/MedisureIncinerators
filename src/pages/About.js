@@ -3,15 +3,15 @@ import './About.css'
 function About() {
     return (
         <>
-        <div className="col-lg-12 ">
-        <div className="head">
+        <div className="col-lg-12 " id="about_div">
+        {/* <div className="head">
         <h1 className="title">ABOUT <strong> US </strong> </h1>
-        </div>
+        </div> */}
         </div>
         <div className="container"> 
           <div className="row"> 
             <div className="col-lg-5 mb-3"> 
-                <div className="card image" > 
+                <div className="about_image" > 
                     <img className="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMeRBQg_da6PT_nK5NWGON9IsJaVoWffxAEA&usqp=CAU"/>
                 </div> 
                 </div> 
@@ -21,10 +21,7 @@ function About() {
                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
                     </div> 
                  </div> 
                  </div>
