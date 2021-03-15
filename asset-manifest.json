@@ -1,29 +1,35 @@
 {
   "files": {
-    "main.css": "/MedisureIncinerators/static/css/main.baf8b50e.chunk.css",
-    "main.js": "/MedisureIncinerators/static/js/main.56587ee5.chunk.js",
-    "main.js.map": "/MedisureIncinerators/static/js/main.56587ee5.chunk.js.map",
+    "main.css": "/MedisureIncinerators/static/css/main.fdfba423.chunk.css",
+    "main.js": "/MedisureIncinerators/static/js/main.cd3990d1.chunk.js",
+    "main.js.map": "/MedisureIncinerators/static/js/main.cd3990d1.chunk.js.map",
     "runtime-main.js": "/MedisureIncinerators/static/js/runtime-main.d3f36d83.js",
     "runtime-main.js.map": "/MedisureIncinerators/static/js/runtime-main.d3f36d83.js.map",
     "static/css/2.68191865.chunk.css": "/MedisureIncinerators/static/css/2.68191865.chunk.css",
-    "static/js/2.b65a39d5.chunk.js": "/MedisureIncinerators/static/js/2.b65a39d5.chunk.js",
-    "static/js/2.b65a39d5.chunk.js.map": "/MedisureIncinerators/static/js/2.b65a39d5.chunk.js.map",
+    "static/js/2.6f07b3bd.chunk.js": "/MedisureIncinerators/static/js/2.6f07b3bd.chunk.js",
+    "static/js/2.6f07b3bd.chunk.js.map": "/MedisureIncinerators/static/js/2.6f07b3bd.chunk.js.map",
     "static/js/3.c387e0ba.chunk.js": "/MedisureIncinerators/static/js/3.c387e0ba.chunk.js",
     "static/js/3.c387e0ba.chunk.js.map": "/MedisureIncinerators/static/js/3.c387e0ba.chunk.js.map",
     "index.html": "/MedisureIncinerators/index.html",
     "static/css/2.68191865.chunk.css.map": "/MedisureIncinerators/static/css/2.68191865.chunk.css.map",
-    "static/css/main.baf8b50e.chunk.css.map": "/MedisureIncinerators/static/css/main.baf8b50e.chunk.css.map",
-    "static/js/2.b65a39d5.chunk.js.LICENSE.txt": "/MedisureIncinerators/static/js/2.b65a39d5.chunk.js.LICENSE.txt",
+    "static/css/main.fdfba423.chunk.css.map": "/MedisureIncinerators/static/css/main.fdfba423.chunk.css.map",
+    "static/js/2.6f07b3bd.chunk.js.LICENSE.txt": "/MedisureIncinerators/static/js/2.6f07b3bd.chunk.js.LICENSE.txt",
     "static/media/bm.1a488d55.png": "/MedisureIncinerators/static/media/bm.1a488d55.png",
     "static/media/bmw_rules.0ca50564.pdf": "/MedisureIncinerators/static/media/bmw_rules.0ca50564.pdf",
+    "static/media/ci.3d184b75.jpg": "/MedisureIncinerators/static/media/ci.3d184b75.jpg",
+    "static/media/covid19guidelines.9ada9119.pdf": "/MedisureIncinerators/static/media/covid19guidelines.9ada9119.pdf",
+    "static/media/es.50362927.jpg": "/MedisureIncinerators/static/media/es.50362927.jpg",
     "static/media/homeimg.8b5faefd.jpg": "/MedisureIncinerators/static/media/homeimg.8b5faefd.jpg",
-    "static/media/Home.css": "/MedisureIncinerators/static/media/plant.8a62b33b.jpg"
+    "static/media/medisurecto.705af1c8.pdf": "/MedisureIncinerators/static/media/medisurecto.705af1c8.pdf",
+    "static/media/mih.a6d7af65.jpg": "/MedisureIncinerators/static/media/mih.a6d7af65.jpg",
+    "static/media/Home.css": "/MedisureIncinerators/static/media/plant.8a62b33b.jpg",
+    "static/media/sr.f3c1e39b.png": "/MedisureIncinerators/static/media/sr.f3c1e39b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d3f36d83.js",
     "static/css/2.68191865.chunk.css",
-    "static/js/2.b65a39d5.chunk.js",
-    "static/css/main.baf8b50e.chunk.css",
-    "static/js/main.56587ee5.chunk.js"
+    "static/js/2.6f07b3bd.chunk.js",
+    "static/css/main.fdfba423.chunk.css",
+    "static/js/main.cd3990d1.chunk.js"
   ]
 }
