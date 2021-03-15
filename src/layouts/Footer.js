@@ -23,13 +23,18 @@ function Footer() {
               style={{ fontSize: "70px" }}
             />
           </a>
-          <a href='https://www.instagram.com/jatin.karla11/'>
-            <InstagramIcon
-              className='whatsapp_icon'
+          <a href='tel:8955162252' style={{color:"black"}}>
+            <CallOutlinedIcon
               style={{ fontSize: "70px" }}
+              className='whatsapp_icon'
             />
           </a>
-          <a href='#'>
+          <a style={{color:"black"}} href="mailto:medisureincinerators@gmail.com?Subject=Hello%20Medisure Incinerators">   
+          <MailOutlineIcon
+          style={{ fontSize: "70px" }}
+          className='whatsapp_icon'
+        /></a>
+          {/* <a href='#'>
             <LinkedInIcon
               className='whatsapp_icon'
               style={{ fontSize: "70px" }}
@@ -46,13 +51,13 @@ function Footer() {
               className='whatsapp_icon'
               style={{ fontSize: "70px" }}
             />
-          </a>
+          </a> */}
         </div>
         <div className='footer_copyright'>
-          Copyright &nbsp;<span className='far fa-copyright'></span>
-          <a style={{ textDecoration: "none",color:"black" }} href='#'>
+          Copyright &nbsp;<span style={{marginTop:"5px"}} className='far fa-copyright'></span>
+          <span><a style={{ textDecoration: "none",color:"black" }} href='#'>
             <strong>&nbsp;Medisure Incinerators</strong>
-          </a>
+          </a></span>
           <span> &nbsp;{n} All rights reserved.</span>
         </div>
       </div>

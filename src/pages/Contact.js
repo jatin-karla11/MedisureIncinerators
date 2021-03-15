@@ -43,7 +43,7 @@ function Contact() {
     const sendMail=(e)=>{
         e.preventDefault();
         // console.log(phone)
-        
+        alert("working")
         let data={
           name:name,
           email:email,
@@ -53,7 +53,6 @@ function Contact() {
         console.log(data);
           
         axios.post('http://localhost:1337/form',data).then(res=>{
-          console.log("innnnn")
           handleClick();
           resetForm();
         }).catch(()=>{
@@ -65,7 +64,7 @@ function Contact() {
     
         }).catch(()=>{
           // console.log("message not saved to database!!!")
-          alert("message not saved to database!!!");
+          alert("check your internet connection!")
         })
         
       }
@@ -86,7 +85,7 @@ function Contact() {
    
         <div className="col-md-6">
         <div class="jumbotron"><h1>Contact Us </h1> </div>
-            <form className="my-form">
+            <form className="my-form" onSubmit={sendMail}>
                 <div className="form-group">
                 <i class="fa fa-user icon">  </i>   &nbsp;&nbsp;
                     <label for="form-name">Name</label>
@@ -146,7 +145,7 @@ function Contact() {
                        
                         <h2><i class="fas fa-phone-alt">  <strong>    Phone </strong>   </i></h2>
                     <h6><a href='tel:8955162252' style={{color:"black"}}>+91 9424874278</a></h6>
-                    <h6>+91 9999999999 </h6>
+                    <h6><a href='tel:9424524041' style={{color:"black"}}>+91 9424524041</a></h6>
                     <hr  style={{backgroundColor:"#808080"}} />
         
 

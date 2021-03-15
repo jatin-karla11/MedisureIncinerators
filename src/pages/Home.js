@@ -11,6 +11,14 @@ import ValueCard from '../layouts/ValueCard';
 import ServiceCard from '../layouts/ServiceCard';
 import About from './About'
 import bmwpdf from './bmw_rules.pdf'
+import medisurecto from './medisurecto.pdf'
+import covid19guidelines from './covid19guidelines.pdf'
+import es from './pagesimages/es.jpg'
+import ci from './pagesimages/ci.jpg'
+import mih from './pagesimages/mih.jpg'
+import sr from './pagesimages/sr.png'
+
+
 
 function Home() {
     return (
@@ -24,12 +32,13 @@ function Home() {
           
           </div>
           <div className='home_values_content'>
-          <ValueCard cardwcu="" title="Vision" content="Clean Healthy and well protected environment supporting a sustainable Medical fraternity and economy."/>
-            <ValueCard cardwcu="" title="Health and well being" content="Proper Disposal of Waste without any adverse effect on Human health and environment."/>
-            <ValueCard cardwcu="" title="Trust" content="We support, trust and value our Members and empower each other to make decisions."/>
-            <ValueCard cardwcu="" title="Innovations" content="We are innovative, adaptive and open to new and flexible ways of working. We strive continuously for improvement and excellence through learning and development."/>
+          {/* <ValueCard cardwcu="" title="Vision" content="Clean Healthy and well protected environment supporting a sustainable Medical fraternity and economy."/> */}
+            <ValueCard cardwcu={mih} title="Entrepreneurial Spirit" content="Proper Disposal of Waste without any adverse effect on Human health and environment."/>
+            <ValueCard cardwcu={ci} title="Continual Improvement" content="We support, trust and value our Members and empower each other to make decisions."/>
+            <ValueCard cardwcu={sr} title="Social responsibility" content="To protect the health of all people and environment, we must address the effects of Bio-Medical Waste. The movement to eliminate dangerous waste must move forward in partnership with prescribed authorities."/>
+            {/* <ValueCard cardwcu="" title="Innovations" content="We are innovative, adaptive and open to new and flexible ways of working. We strive continuously for improvement and excellence through learning and development."/>
             <ValueCard cardwcu="" title="Social responsibility" content="To protect the health of all people and environment, we must address the effects of Bio-Medical Waste. The movement to eliminate dangerous waste must move forward in partnership with prescribed authorities."/>
-            <ValueCard cardwcu="" title="Health economy" content="A healthy economy is one in which people?s fundamental needs are met efficiently, businesses are accountable, resources are shared in a way that minimizes disparities, and overall levels of consumption are sustainable."/>
+            <ValueCard cardwcu="" title="Health economy" content="A healthy economy is one in which people?s fundamental needs are met efficiently, businesses are accountable, resources are shared in a way that minimizes disparities, and overall levels of consumption are sustainable."/> */}
           </div>
         </div>
         <div className='about' id="aboutid">
@@ -53,15 +62,15 @@ function Home() {
           
           </div>
           <div className="services_content">
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.." />
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+            <ServiceCard img="" content="Biomedical Waste Service" />
+            <ServiceCard img="" content="Sharps Waste Service"/>
+            <ServiceCard img="" content="Pharmaceutical Waste Service"/>
+            <ServiceCard img="" content="Disposal Of Expired Medicine"/>
+            <ServiceCard img="" content="Medical Waste Pickup"/>
+            <ServiceCard img="" content="Maintaining Healthy Lifestyle"/>
           </div>
         </div>
-        <div className='gallery' id="galleryid">
+        {/* <div className='gallery' id="galleryid">
             <div className='page_title'>Gallery
           <hr className="titlehr"></hr>
             
@@ -118,7 +127,7 @@ function Home() {
             </div>
           </OwlCarousel>
           </div>
-        </div>
+        </div> */}
         <div className='documents' id="documentid">
           <div className="page_title">Documents
           <hr className="titlehr"></hr>
@@ -127,7 +136,9 @@ function Home() {
           <div className="documents_content">
             <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div>
             <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"BMW Rules"</a></div>
-            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"Consent Order"</a></div>
+            <div className="documents_content_pdf"><a href={medisurecto} target="_blank">"Consent Order"</a></div>
+            <div className="documents_content_pdf"><a href={covid19guidelines} target="_blank">"Covid-19 Guidelines"</a></div>
+
           </div>
         </div>
         <div className='contact' id="contactid">
