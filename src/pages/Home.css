@@ -1,15 +1,18 @@
 .home{
     width: 100%;
     padding-top: 60px;
+
 }
 .home_image{
     width: 100%;
+    /* position: relative; */
 }
 .homeimg{
     max-width: 100%;
 }
 .home_values{
     background: #e9ecef;
+    /* position: relative; */
 }
 .home_values_content{
     /* padding: 50px 0px; */

@@ -23,19 +23,19 @@ function Header() {
           <Link className="nav-link active" activeClassName="menu_active" aria-current="page" to="homeid">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" activeClassName="menu_active" to="aboutid">About</Link>
+          <Link className="nav-link" offset={-70} activeClassName="menu_active" to="aboutid">About</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" activeClassName="menu_active" to="serviceid">Services</Link>
+          <Link className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</Link>
         </li>
         {/* <li className="nav-item">
           <Link className="nav-link" activeClassName="menu_active" to="galleryid">Gallery</Link>
         </li> */}
         <li className="nav-item">
-          <Link className="nav-link" activeClassName="menu_active" to="documentid">Documents</Link>
+          <Link className="nav-link" offset={-70} activeClassName="menu_active" to="documentid">Documents</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" activeClassName="menu_active" to="contactid">Contact</Link>
+          <Link className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</Link>
         </li>
         {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

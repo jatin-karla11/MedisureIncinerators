@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from './Contact'
 import './Home.css'
-import homeimg from './pagesimages/homeimg.jpg'
+import homeimgwhite from './pagesimages/homeimgwhite.jpg'
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
@@ -17,6 +17,7 @@ import es from './pagesimages/es.jpg'
 import ci from './pagesimages/ci.jpg'
 import mih from './pagesimages/mih.jpg'
 import sr from './pagesimages/sr.png'
+import Carousel from '../layouts/Carousel';
 
 
 
@@ -24,7 +25,8 @@ function Home() {
     return (
       <div className='home' id="homeid">
         <div className='home_image'>
-          <img className='homeimg' src={homeimg} alt='' />
+          <Carousel/>
+          <img className='homeimg' style={{zIndex:"-2"}} src={homeimgwhite} alt='' />
         </div>
         <div className='home_values'>
           <div className='page_title'>Values
@@ -134,9 +136,9 @@ function Home() {
           
           </div>
           <div className="documents_content">
-            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div>
+            {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
             <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"BMW Rules"</a></div>
-            <div className="documents_content_pdf"><a href={medisurecto} target="_blank">"Consent Order"</a></div>
+            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"Environment Bulletin"</a></div>
             <div className="documents_content_pdf"><a href={covid19guidelines} target="_blank">"Covid-19 Guidelines"</a></div>
 
           </div>
