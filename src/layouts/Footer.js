@@ -53,13 +53,14 @@ function Footer() {
             />
           </a> */}
         </div>
-        <div className='footer_copyright'>
+        <center><div className='footer_copyright'>
           Copyright &nbsp;<span style={{marginTop:"5px"}} className='far fa-copyright'></span>
           <span><a style={{ textDecoration: "none",color:"black" }} href='#'>
-            <strong>&nbsp;Medisure Incinerators</strong>
+            <strong>&nbsp;medisureincinerators.in</strong>
           </a></span>
           <span> &nbsp;{n} All rights reserved.</span>
         </div>
+        </center>
       </div>
     );
 }
