@@ -80,11 +80,12 @@ function Carousel() {
         }}
       >
         <div ref={slider} className='slider'>
-          <section> 
-            <img width='100%' height='100%' src={hs1} />
-            <div className='slider_img_content'></div>
+          <section className="slider_section1"> 
+            <img width='100%' className="slider_section1_img" height='100%' src={hs1} />
+            <div className='slider_img_content'>..There is no such thing as "away"<br></br>
+            When we throw anything away it must go somewhere..</div>
           </section>
-          <section>
+          <section className="slider_section2">
             <img width='100%' height='100%' src={hs2} />
             {/* <div className='slider_img_content'>Thanks for comming here</div> */}
           </section>
