@@ -23,7 +23,7 @@ function Footer() {
               style={{ fontSize: "70px" }}
             />
           </a>
-          <a href='tel:8955162252' style={{color:"black"}}>
+          <a href='tel:9424874278' style={{color:"black"}}>
             <CallOutlinedIcon
               style={{ fontSize: "70px" }}
               className='whatsapp_icon'

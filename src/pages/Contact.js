@@ -144,7 +144,7 @@ function Contact() {
                      <hr  style={{backgroundColor:"#808080"}} />
                        
                         <h2><i class="fas fa-phone-alt">  <strong>    Phone </strong>   </i></h2>
-                    <h6><a href='tel:8955162252' style={{color:"black"}}>+91 9424874278</a></h6>
+                    <h6><a href='tel:9424874278' style={{color:"black"}}>+91 9424874278</a></h6>
                     <h6><a href='tel:9424524041' style={{color:"black"}}>+91 9424524041</a></h6>
                     <hr  style={{backgroundColor:"#808080"}} />
         
