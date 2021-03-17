@@ -47,6 +47,19 @@ align-self: flex-end;
   background: black;
   color: white;
 }
+.about_readless{
+  font-weight: 500;
+  background: white;
+transition: 0.5s;
+color: black;
+padding: 2px 20px;
+width: 150px;
+align-self: center;
+}
+.about_readless:hover{
+  background: black;
+  color: white;
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
 
   .card-text {

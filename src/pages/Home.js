@@ -6,17 +6,18 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 import truck from './pagesimages/truck1.png'
-import expired from './pagesimages/expired1.png'
+import c19 from './pagesimages/c19.png'
 import hl1 from './pagesimages/hl1.png'
 import wc from './pagesimages/wastecontainer.png'
 import container from './pagesimages/container.png'
 import sharps from './pagesimages/sharps.png'
+import gb from './pagesimages/garbagebag.png'
+
 import {Link} from 'react-scroll'
 import ValueCard from '../layouts/ValueCard';
 import ServiceCard from '../layouts/ServiceCard';
 import About from './About'
 import bmwpdf from './bmw_rules.pdf'
-import medisurecto from './medisurecto.pdf'
 import covid19guidelines from './covid19guidelines.pdf'
 import es from './pagesimages/es.jpg'
 import ci from './pagesimages/ci.jpg'
@@ -48,12 +49,12 @@ function Home() {
             <ValueCard
               cardwcu={mih}
               title='Entrepreneurial Spirit'
-              content='Proper Disposal of Waste without any adverse effect on Human health and environment.'
+              content='We believe in providing modern effective services for the proper disposal of bio-medical waste without any adverse effect on human health and environment. We stand together to make a better world for everyone.'
             />
             <ValueCard
               cardwcu={ci}
               title='Continual Improvement'
-              content='We support, trust and value our Members and empower each other to make decisions.'
+              content='We believe in continuous improvement of environment and health-care activities and so we support, trust and value our Members and empower each other to make decisions.'
             />
             <ValueCard
               cardwcu={sr}
@@ -83,7 +84,7 @@ function Home() {
             <ValueCard
               cardwcu={wc}
               title='Biomedical Waste Treatment'
-              content='The bio-medical wastes generated from health care units depend upon a number of factors such as waste management methods, type of health care units, occupancy of healthcare units, specialization of healthcare units...'
+              content='The bio-medical wastes generated from health care units is collected and disposed daily with effective bio-medical waste managemnet techniques.'
             />
             <ValueCard
               cardwcu={sharps}
@@ -96,19 +97,19 @@ function Home() {
               content='Our Medicare services are designed to help hospitals characterize, segregate, transport and properly dispose of these materials, as well as conveniently handle their expired drugs.'
             />
             <ValueCard
-              cardwcu={expired}
-              title='Disposal Of Expired Medicine'
-              content=''
+              cardwcu={c19}
+              title='Disposal Of Covid-19 Waste'
+              content='As per Covid-19 guidelines the waste generated during diagnostics and treatment of covid-19 patients is handled and disposed carefully.'
             />
             <ValueCard
               cardwcu={truck}
               title='Medical Waste Pickup'
-              content=''
+              content='We provide end-to-end transport facility for the medical waste pickup on daily basis.'
             />
             <ValueCard
-              cardwcu={hl1}
-              title='Maintaining Healthy Lifestyle'
-              content=''
+              cardwcu={gb}
+              title='Supply Of Non-Chlorinated Garbage Bags'
+              content='We provide non-chlorinated garbage bags for the collection of bio-medical waste so as to maintain proper transfer of waste for further disposal.'
             />
           </div>
         </div>
