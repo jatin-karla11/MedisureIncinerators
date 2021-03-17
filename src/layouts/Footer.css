@@ -30,6 +30,24 @@
     padding: 30px;
     background: #d9dcdf;
   }
+  
+  .footer_buttons{
+    font-weight: 500;
+    background: white;
+  transition: 0.5s;
+  color: black;
+  padding: 2px 20px;
+  width: 150px;
+  align-self: flex-end;
+  }
+  .footer_buttons:hover{
+    background: black;
+    color: white;
+  }
+  .footer_button_div{
+    align-self: center;
+    justify-content: center;
+  }
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .footer_copyright{
     /* display: flex; */

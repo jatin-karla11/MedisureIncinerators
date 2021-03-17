@@ -16,7 +16,11 @@ function Footer() {
     return (
       <div className='footer'>
         {/* <br></br> */}
-        <div className='footer_links'>
+        <div className="row" style={{width:"100%"}}>
+        <div className="col-4 footer_button_div">
+          <button className="footer_buttons">Bank Details</button>
+        </div>
+        <div className='col-4 footer_links'>
           <a href='https://wa.me/+919827230041'>
             <WhatsAppIcon
               className='whatsapp_icon'
@@ -34,24 +38,12 @@ function Footer() {
           style={{ fontSize: "70px" }}
           className='whatsapp_icon'
         /></a>
-          {/* <a href='#'>
-            <LinkedInIcon
-              className='whatsapp_icon'
-              style={{ fontSize: "70px" }}
-            />
-          </a>
-          <a href='#'>
-            <FacebookIcon
-              className='whatsapp_icon'
-              style={{ fontSize: "70px" }}
-            />
-          </a>
-          <a href='#'>
-            <TwitterIcon
-              className='whatsapp_icon'
-              style={{ fontSize: "70px" }}
-            />
-          </a> */}
+
+        </div>
+        
+        <div className="col-4  footer_button_div">
+          <button className="footer_buttons">Reach Us</button>
+        </div>
         </div>
         <center><div className='footer_copyright'>
           Copyright &nbsp;<span style={{marginTop:"5px"}} className='far fa-copyright'></span>

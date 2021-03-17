@@ -23,7 +23,7 @@ function About() {
                   workers and on the environment. Our company has taken an
                   initiative to aid in providing biomedical waste management
                   services to health care facilities of Khandwa, Khargone, and
-                  Burhanpur districts. Our professionals are ready to haul your hazardous waste away..
+                  Burhanpur districts.
                 </p>
                 <button className="about_readmore">Read More</button>
               </div>
