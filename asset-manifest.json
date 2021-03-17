@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b40d78cf.chunk.css",
-    "main.js": "/static/js/main.52521cef.chunk.js",
-    "main.js.map": "/static/js/main.52521cef.chunk.js.map",
+    "main.css": "/static/css/main.3bbc3001.chunk.css",
+    "main.js": "/static/js/main.328b3f0b.chunk.js",
+    "main.js.map": "/static/js/main.328b3f0b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.aff06026.js",
     "runtime-main.js.map": "/static/js/runtime-main.aff06026.js.map",
     "static/css/2.68191865.chunk.css": "/static/css/2.68191865.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.9884248d.chunk.js.map": "/static/js/3.9884248d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.68191865.chunk.css.map": "/static/css/2.68191865.chunk.css.map",
-    "static/css/main.b40d78cf.chunk.css.map": "/static/css/main.b40d78cf.chunk.css.map",
+    "static/css/main.3bbc3001.chunk.css.map": "/static/css/main.3bbc3001.chunk.css.map",
     "static/js/2.415de235.chunk.js.LICENSE.txt": "/static/js/2.415de235.chunk.js.LICENSE.txt",
     "static/media/bm.1a488d55.png": "/static/media/bm.1a488d55.png",
     "static/media/bmw_rules.0ca50564.pdf": "/static/media/bmw_rules.0ca50564.pdf",
@@ -36,7 +36,7 @@
     "static/js/runtime-main.aff06026.js",
     "static/css/2.68191865.chunk.css",
     "static/js/2.415de235.chunk.js",
-    "static/css/main.b40d78cf.chunk.css",
-    "static/js/main.52521cef.chunk.js"
+    "static/css/main.3bbc3001.chunk.css",
+    "static/js/main.328b3f0b.chunk.js"
   ]
 }
