@@ -82,7 +82,7 @@ function Home() {
           <div className='services_content'>
             <ValueCard
               cardwcu={wc}
-              title='Biomedical Waste Service'
+              title='Biomedical Waste Treatment'
               content='The bio-medical wastes generated from health care units depend upon a number of factors such as waste management methods, type of health care units, occupancy of healthcare units, specialization of healthcare units...'
             />
             <ValueCard
