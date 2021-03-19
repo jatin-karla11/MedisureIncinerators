@@ -1,0 +1,28 @@
+.signup{
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup_container{
+    margin: 50px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgb(116, 221, 240);
+    border: 2px solid black;
+}
+.signup_container_div{
+    margin: 10px;
+    font-weight: bold;
+}
+.signup_container_div_label{
+    font-weight: 500;
+
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+.signup_container{
+    margin: 30px 10px;
+    padding: 5px;
+}
+}

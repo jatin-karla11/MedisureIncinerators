@@ -4,6 +4,7 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import hs1 from './layout images/homeslider1.jpg'
 import hs2 from './layout images/homeslider2.jpg'
+import { Link } from "react-router-dom";
 
 
 function Carousel() {
@@ -82,8 +83,13 @@ function Carousel() {
         <div ref={slider} className='slider'>
           <section className="slider_section1"> 
             <img width='100%' className="slider_section1_img" height='100%' src={hs1} />
-            <div className='slider_img_content'>..There is no such thing as "away"<br></br>
-            When we throw anything away it must go somewhere..</div>
+            <div className='slider_img_content'><p>..There is no such thing as "away"<br></br>
+            When we throw anything away it must go somewhere..</p>
+            <Link to="/signin">
+            <button className="info_div_button">Sign-In</button>
+            </Link>
+            </div>
+            
           </section>
           <section className="slider_section2">
             <img width='100%' height='100%' src={hs2} />

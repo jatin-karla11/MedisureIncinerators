@@ -114,7 +114,18 @@
     z-index: 2;
     cursor: pointer;
 }
-
+.info_div_button{
+    font-size: 30px;
+    background: transparent;
+transition: 0.5s;
+color: white;
+padding: 2px 20px;
+width: 180px;
+}
+.info_div_button:hover{
+    color: black;
+    background: white;
+}
 @media(max-width : 1024px) and (min-width : 901px){
     .next{
         top: 240px;

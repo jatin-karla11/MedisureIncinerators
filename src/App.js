@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import { Route, Switch,Redirect } from 'react-router-dom';
+import Signin from './pages/Signin';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 function App() {
@@ -13,10 +16,9 @@ function App() {
       <Header/>
       <Switch>
       <Route exact path="/" component={Home}/>
-      {/* <Route exact path="/about" component={AboutDetail}/>
-      <Route exact path="/service" component={Home}/>
-      <Route exact path="/contact" component={Contact}/> */}
-
+      <Route exact path="/signin" component={Signin} />
+      <Route exact path="/login" component={Login}/>
+      <Route exact path="/signup" component={Signup}/>
       <Redirect to="/" />
 
       </Switch>

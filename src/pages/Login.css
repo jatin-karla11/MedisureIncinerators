@@ -1,0 +1,28 @@
+.login{
+    padding-top: 80px;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_container{
+    margin: 50px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgb(116, 221, 240);
+    border: 2px solid black;
+}
+.login_container_title{
+    font-weight: bold;
+    text-align: center;
+}
+.login_container_input{
+    margin: 10px;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .login_container{
+        padding: 10px;
+        margin: 10px;
+    }
+}
