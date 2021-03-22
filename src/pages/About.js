@@ -1,19 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './About.css'
 import $ from 'jquery';
+import { Modal } from 'react-bootstrap';
+import {Button} from '@material-ui/core'
+import bm from '../layouts/layout images/bm.png'
+
 function About() {
 
-  const displayAboutDetails=()=>{
-    $("#about_details").css("display","block");
-    $("#about_readmore").css("display","none");
-  }
-  const hideAboutDetails=()=>{
-    $("#about_details").css("display","none");
-    $("#about_readmore").css("display","block");
-    
-  }
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);  
   return (
+    
       <>
         <div className='col-lg-12 ' id='about_div'></div>
         <div className='container'>
@@ -37,26 +36,40 @@ function About() {
                   services to health care facilities of Khandwa, Khargone, and
                   Burhanpur districts.
                 </p>
-                <button id="about_readmore" onClick={displayAboutDetails} className="about_readmore">Read More</button>
+                <button id="about_readmore" className="about_readmore" onClick={handleShow}>Read More  &nbsp; <i class="fas fa-greater-than"></i></button>
+                <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+        <img className="medisurelogo" src={bm} alt=""/>  
+          <Modal.Title style={{color:"#DD501D"}}>&nbsp;Medisure Incinerators</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+                  We have an incinerator of 100 kg/hr capacity with fully computerized, PLC
+                  controlled processing unit incorporated with automatic feeding system to treat incinerable
+                  waste .To treat blue and red category waste we are equipped with computerized and PLC
+                  controlled Autoclaves with inbuilt facility for indicators. Available Plastic shredders enables
+                  safe plastic recycling. A high-tech ETP plant facilitates to fulfilment of ZERO DISCHARGE
+                  policy. Adherence to air pollution control standards is regulated through continuous online
+                  stack monitoring system while self owned GPS enabled vehicles help to provide guarded
+                  collection and transportation of BMW.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose} style={{background:"#DD501D" ,color:"white"}}>
+           Read Less
+          </Button>
+         
+        </Modal.Footer>
+      </Modal>
               </div>
             </div>
-            <div className='card text' id="about_details" style={{display:"none"}}>
-              <p className='card-text'>
-            We have an incinerator of 100 kg/hr capacity with fully computerized, PLC
-controlled processing unit incorporated with automatic feeding system to treat incinerable
-waste .To treat blue and red category waste we are equipped with computerized and PLC
-controlled Autoclaves with inbuilt facility for indicators. Available Plastic shredders enables
-safe plastic recycling. A high-tech ETP plant facilitates to fulfilment of ZERO DISCHARGE
-policy. Adherence to air pollution control standards is regulated through continuous online
-stack monitoring system while self owned GPS enabled vehicles help to provide guarded
-collection and transportation of BMW.
-<br></br>
-<br></br>
-<button id="about_readmore" onClick={hideAboutDetails} className="about_readless">Read less</button>
+           
 
-</p>
 
-            </div>
+    
           </div>
         </div>
       </>

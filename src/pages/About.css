@@ -1,5 +1,4 @@
-#about_div{
-  
+#about_div {
 }
 .card-text {
   text-align: justify;
@@ -34,34 +33,34 @@
   text-decoration: underline;
 }
 
-.about_readmore{
+.about_readmore {
+  outline: none;
   font-weight: 500;
   background: white;
-transition: 0.5s;
-color: black;
-padding: 2px 20px;
-width: 150px;
-align-self: flex-end;
+  transition: 0.5s;
+  color: black;
+  padding: 2px 20px;
+  width: 150px;
+  align-self: flex-end;
 }
-.about_readmore:hover{
+.about_readmore:hover {
   background: black;
   color: white;
 }
-.about_readless{
+.about_readless {
   font-weight: 500;
   background: white;
-transition: 0.5s;
-color: black;
-padding: 2px 20px;
-width: 150px;
-align-self: center;
+  transition: 0.5s;
+  color: black;
+  padding: 2px 20px;
+  width: 150px;
+  align-self: center;
 }
-.about_readless:hover{
+.about_readless:hover {
   background: black;
   color: white;
 }
 @media screen and (max-width: 768px) and (orientation: portrait) {
-
   .card-text {
     text-align: justify;
     padding: 20px;
@@ -69,8 +68,8 @@ align-self: center;
     height: 90%;
     font-size: 16px;
   }
-.about_readmore{
-align-self: center;
-width: auto;
-}
+  .about_readmore {
+    align-self: center;
+    width: auto;
+  }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
@@ -9,7 +9,9 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import {Link} from 'react-scroll';
 import $ from 'jquery';
-
+import { Modal } from 'react-bootstrap';
+import {Button} from '@material-ui/core'
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 
 var d = new Date();
 var n = d.getFullYear();
@@ -17,13 +19,10 @@ var n = d.getFullYear();
 
 
 function Footer() {
+  const [show, setShow] = useState(false);
 
-  const showBank=()=>{
-    $("#bank").css("display","block");
-  }
-  const hideBank=()=>{
-    $("#bank").css("display","none");
-  }
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);  
 
   // useEffect(() => {
   //   $("#bank").click
@@ -58,19 +57,37 @@ function Footer() {
         </div>
         
         <div className="col-md-4 footer_button_div">
-          <button id="bankshow" className="footer_buttons" onClick={showBank}>Bank/GST Details</button>
-        </div>
-        <div id="bank" style={{display:"none",border:"2px solid black"}}>
-          <div><strong>Bank Name : Bank Of Maharashtra</strong></div>
+          <button id="bankshow" className="footer_buttons" onClick={handleShow}>Bank/GST Details</button>
+          
+        
+          <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <AccountBalanceIcon fontSize="large" />
+          <Modal.Title style={{color:"#DD501D"}}>&nbsp; Bank Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <div><strong>Bank Name : Bank Of Maharashtra</strong></div>
         <div><strong>Account Name : MEDISURE INCINERATORS</strong></div>
         <div><strong>Account Number : 60379919436</strong></div>
         <div><strong>IFSC Code : MAHB0000517</strong></div>
         <div><strong>Bank Address : Chhagaon Makhan</strong></div>
         <br></br>
         <div><strong>GSTIN : 23ADUPJ9656N3ZJ</strong></div>
-        <br></br>
-        <button className="footer_buttons" onClick={hideBank}>Show Less</button>
-        </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose} style={{background:"#DD501D" ,color:"white"}}>
+            Close
+          </Button>
+         
+        </Modal.Footer>
+      </Modal>
+      </div>
+        
         </div>
         </div>
         <center><div className='footer_copyright'>
