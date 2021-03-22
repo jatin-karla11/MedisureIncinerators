@@ -1,12 +1,12 @@
 import React from 'react'
 import './Login.css'
 
-function Login() {
+function Login({location}) {
     return (
       <div className='login'>
         <div className='login_container'>
           <div className='login_container_title'>
-            Enter your credentials for signing in :
+            Enter your credentials for signing in : {location.whichLogin}
           </div>
           <br></br>
           <div className='login_container_input'>

@@ -1,9 +1,11 @@
 .root{
-    width: 358px;
-    height:400px;
-    margin-left:40px;
+    /* width: 358px; */
+    /* height:400px; */
     margin-top:50px;
     z-index: 2;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+    /* transition: all ease 2s !important; */
 }
 .cardwcu_bottom{
     display: flex; 
@@ -14,7 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;    
+padding: 20px 20px 40px 20px;
+        
 }
 .root_logo{
     height: 124px;
@@ -37,27 +40,78 @@ margin: 20px 0px;
 font-size: 16.8148px;
 line-height: 26px;
 /* or 156% */
-
 text-align: justify;
-
 color: #10182F;
 }
+
+.readMoreCSS{
+    margin-top: 0;
+    width: 100vw;
+    height: calc(100vh - 76px);
+    position: fixed;
+    top: 76px;
+    left: 0;
+    z-index: 10000;
+    animation: grow 1s;
+}
+
+@keyframes grow{
+    0%{
+        opacity: 1;
+        transform: scale(0) ;
+    }
+    50%{
+        opacity: 1;
+        transform: scale(.6) ;
+    }
+    90%{
+        opacity: .9;
+        transform: scale(1.2) ; 
+    }
+    100%{
+        margin-top: 0;
+        width: 100vw;
+        height: calc(100vh - 76px);
+        position: fixed;
+        top: 76px;
+        left: 0;
+        z-index: 10000;
+    }
+}
+
+.RM_btn{
+    border: 1px solid transparent;
+    padding: 4px 6px;
+    box-shadow: 0 0 4px grey;
+    position: absolute;
+    right: 24px;
+    bottom: 13px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    transition: all ease-out .5s;
+}
+.RM_btn:hover{
+    /* border: 1px solid black; */
+    box-shadow: 0 0 8px grey;
+
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1426px){
     .root{
-        width: 300px;
-        height:400px;
-        margin-left:40px;
-        margin-top:50px;
-        z-index: 2;
+        /* width: 300px; */
+        /* height:400px; */
+        /* margin-left:40px; */
+        /* margin-top:50px; */
+        /* z-index: 2; */
     }
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .root{
-    width: 223px;
-    height:257px;
-    margin: 0 auto;
-    margin-top:50px;
+    /* width: 223px; */
+    /* height:257px; */
+    /* margin: 0 auto; */
+    /* margin-top:50px; */
 
     }
     .root_container{
