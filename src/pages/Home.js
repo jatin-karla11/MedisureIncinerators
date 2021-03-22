@@ -1,67 +1,119 @@
 import React from 'react'
 import Contact from './Contact'
 import './Home.css'
-import homeimg from './pagesimages/homeimg.jpg'
+import homeimgwhite from './pagesimages/homeimgwhite.jpg'
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-import xyz1 from './pagesimages/plant.jpg'
+import truck from './pagesimages/truck1.png'
+import c19 from './pagesimages/c19.png'
+import hl1 from './pagesimages/hl1.png'
+import wc from './pagesimages/wastecontainer.png'
+import container from './pagesimages/container.png'
+import sharps from './pagesimages/sharps.png'
+import gb from './pagesimages/garbagebag.png'
+
 import {Link} from 'react-scroll'
 import ValueCard from '../layouts/ValueCard';
 import ServiceCard from '../layouts/ServiceCard';
 import About from './About'
 import bmwpdf from './bmw_rules.pdf'
+import covid19guidelines from './covid19guidelines.pdf'
+import es from './pagesimages/es.jpg'
+import ci from './pagesimages/ci.jpg'
+import mih from './pagesimages/mih.jpg'
+import sr from './pagesimages/sr.png'
+import Carousel from '../layouts/Carousel';
+
+
 
 function Home() {
     return (
-      <div className='home' id="homeid">
+      <div className='home' id='homeid'>
         <div className='home_image'>
-          <img className='homeimg' src={homeimg} alt='' />
+          <Carousel />
+          <img
+            className='homeimg'
+            style={{ zIndex: "-2" }}
+            src={homeimgwhite}
+            alt=''
+          />
         </div>
         <div className='home_values'>
-          <div className='page_title'>Values
-          <hr className="titlehr"></hr>
-          
+          <div className='page_title'>
+            Values
+            <hr className='titlehr'></hr>
           </div>
           <div className='home_values_content'>
-          <ValueCard cardwcu="" title="Vision" content="Clean Healthy and well protected environment supporting a sustainable Medical fraternity and economy."/>
-            <ValueCard cardwcu="" title="Health and well being" content="Proper Disposal of Waste without any adverse effect on Human health and environment."/>
-            <ValueCard cardwcu="" title="Trust" content="We support, trust and value our Members and empower each other to make decisions."/>
-            <ValueCard cardwcu="" title="Innovations" content="We are innovative, adaptive and open to new and flexible ways of working. We strive continuously for improvement and excellence through learning and development."/>
+            {/* <ValueCard cardwcu="" title="Vision" content="Clean Healthy and well protected environment supporting a sustainable Medical fraternity and economy."/> */}
+            <ValueCard
+              cardwcu={mih}
+              title='Entrepreneurial Spirit'
+              content='We believe in providing modern effective services for the proper disposal of bio-medical waste without any adverse effect on human health and environment. We stand together to make a better world for everyone.'
+            />
+            <ValueCard
+              cardwcu={ci}
+              title='Continual Improvement'
+              content='We believe in continuous improvement of environment and health-care activities and so we support, trust and value our Members and empower each other to make decisions.'
+            />
+            <ValueCard
+              cardwcu={sr}
+              title='Social responsibility'
+              content='To protect the health of all people and environment, we must address the effects of Bio-Medical Waste. The movement to eliminate dangerous waste must move forward in partnership with prescribed authorities.'
+            />
+            {/* <ValueCard cardwcu="" title="Innovations" content="We are innovative, adaptive and open to new and flexible ways of working. We strive continuously for improvement and excellence through learning and development."/>
             <ValueCard cardwcu="" title="Social responsibility" content="To protect the health of all people and environment, we must address the effects of Bio-Medical Waste. The movement to eliminate dangerous waste must move forward in partnership with prescribed authorities."/>
-            <ValueCard cardwcu="" title="Health economy" content="A healthy economy is one in which people?s fundamental needs are met efficiently, businesses are accountable, resources are shared in a way that minimizes disparities, and overall levels of consumption are sustainable."/>
+            <ValueCard cardwcu="" title="Health economy" content="A healthy economy is one in which people?s fundamental needs are met efficiently, businesses are accountable, resources are shared in a way that minimizes disparities, and overall levels of consumption are sustainable."/> */}
           </div>
         </div>
-        <div className='about' id="aboutid">
-          <div className="page_title">
-           About Us
-          <hr className="titlehr"></hr>
-
-         
+        <div className='about' id='aboutid'>
+          <div className='page_title'>
+            About Us
+            <hr className='titlehr'></hr>
           </div>
-          <div className="about_content">
-
+          <div className='about_content'>
             <About />
-            
-
-
           </div>
         </div>
-        <div className='services' id="serviceid">
-          <div className="page_title">Our Services
-          <hr className="titlehr"></hr>
-          
+        <div className='services' id='serviceid'>
+          <div className='page_title'>
+            Our Services
+            <hr className='titlehr'></hr>
           </div>
-          <div className="services_content">
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.." />
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
-            <ServiceCard img="" content="This is a service card made totally by me and hence it looks so pretty over powered.."/>
+          <div className='services_content'>
+            <ValueCard
+              cardwcu={wc}
+              title='Biomedical Waste Treatment'
+              content='The bio-medical wastes generated from health care units is collected and disposed daily with effective bio-medical waste managemnet techniques.'
+            />
+            <ValueCard
+              cardwcu={sharps}
+              title='Sharps Waste Service'
+              content='Sharps waste is a form of medical waste composed of used sharps, which includes any device or object used to puncture or lacerate the skin. Sharps waste is classified as biohazardous waste and must be carefully handled.'
+            />
+            <ValueCard
+              cardwcu={container}
+              title='Pharmaceutical Waste Service'
+              content='Our Medicare services are designed to help hospitals characterize, segregate, transport and properly dispose of these materials, as well as conveniently handle their expired drugs.'
+            />
+            <ValueCard
+              cardwcu={c19}
+              title='Disposal Of Covid-19 Waste'
+              content='As per Covid-19 guidelines the waste generated during diagnostics and treatment of covid-19 patients is handled and disposed carefully.'
+            />
+            <ValueCard
+              cardwcu={truck}
+              title='Medical Waste Pickup'
+              content='We provide end-to-end transport facility for the medical waste pickup on daily basis.'
+            />
+            <ValueCard
+              cardwcu={gb}
+              title='Supply Of Non-Chlorinated Garbage Bags'
+              content='We provide non-chlorinated garbage bags for the collection of bio-medical waste so as to maintain proper transfer of waste for further disposal.'
+            />
           </div>
         </div>
-        <div className='gallery' id="galleryid">
+        {/* <div className='gallery' id="galleryid">
             <div className='page_title'>Gallery
           <hr className="titlehr"></hr>
             
@@ -118,19 +170,32 @@ function Home() {
             </div>
           </OwlCarousel>
           </div>
-        </div>
-        <div className='documents' id="documentid">
-          <div className="page_title">Documents
-          <hr className="titlehr"></hr>
-          
+        </div> */}
+        <div className='documents' id='documentid'>
+          <div className='page_title'>
+            Documents
+            <hr className='titlehr'></hr>
           </div>
-          <div className="documents_content">
-            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div>
-            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"BMW Rules"</a></div>
-            <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"Consent Order"</a></div>
+          <div className='documents_content'>
+            {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
+            <div className='documents_content_pdf'>
+              <a href={bmwpdf} target='_blank'>
+                "BMW Rules"
+              </a>
+            </div>
+            <div className='documents_content_pdf'>
+              <a href={bmwpdf} target='_blank'>
+                "Environment Bulletin"
+              </a>
+            </div>
+            <div className='documents_content_pdf'>
+              <a href={covid19guidelines} target='_blank'>
+                "Covid-19 Guidelines"
+              </a>
+            </div>
           </div>
         </div>
-        <div className='contact' id="contactid">
+        <div className='contact' id='contactid'>
           <Contact />
         </div>
       </div>

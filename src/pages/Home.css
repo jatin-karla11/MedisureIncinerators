@@ -1,15 +1,18 @@
 .home{
     width: 100%;
     padding-top: 60px;
+
 }
 .home_image{
     width: 100%;
+    /* position: relative; */
 }
 .homeimg{
     max-width: 100%;
 }
 .home_values{
     background: #e9ecef;
+    /* position: relative; */
 }
 .home_values_content{
     /* padding: 50px 0px; */
@@ -33,13 +36,13 @@
     margin: 20px;
 }
 .services{
-    /* background: #e9ecef; */
+    background: #e9ecef;
     position: relative;
     /* filter: blur(1px); */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.637);
+    /* color: white; */
+    /* background-color: rgba(0, 0, 0, 0.637); */
 }
-.services::after{
+/* .services::after{
     content:'';
     background: url(./pagesimages/plant.jpg);
     background-repeat: no-repeat;
@@ -52,7 +55,7 @@
     height:100%;
     z-index:-1;
     opacity: 0.8;
-}
+} */
 .services_content{
     margin: 0 auto;
   width: 80%;
@@ -86,7 +89,7 @@
 }
 .documents{
     width: 100%;
-    background: #e9ecef;
+    /* background: #e9ecef; */
 
 }
 .documents_content{
