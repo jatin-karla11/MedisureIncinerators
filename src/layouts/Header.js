@@ -20,7 +20,7 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link active" activeClassName="menu_active" aria-current="page" to="homeid">Home</Link>
+          <NavLink className="nav-link active" activeClassName="menu_active" aria-current="page" to="homeid">Home</NavLink>
         </li>
         <li className="nav-item">
           <Link className="nav-link" offset={-70} activeClassName="menu_active" to="aboutid">About</Link>
@@ -36,6 +36,9 @@ function Header() {
         </li>
         <li className="nav-item">
           <Link className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</Link>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="/signin">Sign-In</NavLink>
         </li>
         {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

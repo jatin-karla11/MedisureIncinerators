@@ -12,6 +12,12 @@
     box-shadow: 1px 1px 10px 1px rgb(116, 221, 240);
     border: 2px solid black;
 }
+.signup_container_title{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 .signup_container_div{
     margin: 10px;
     font-weight: bold;
@@ -20,9 +26,28 @@
     font-weight: 500;
 
 }
+.signup_container_div_input{
+    width: 100%;
+}
+.signup_button{
+    font-weight: 500;
+  background: white;
+  transition: 0.5s;
+  color: black;
+  padding: 2px 20px;
+}
+.signup_button:hover{
+    background-color: black;
+    color: white;
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
 .signup_container{
-    margin: 30px 10px;
+    margin: 10px 10px 30px 10px;
     padding: 5px;
+}
+.signup_container_title{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
 }
 }

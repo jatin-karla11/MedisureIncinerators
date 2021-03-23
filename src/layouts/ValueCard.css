@@ -4,7 +4,7 @@
     margin-top:50px;
     z-index: 2;
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.603);
+    /* border: 1px solid rgba(0, 0, 0, 0.603); */
     /* transition: all ease 2s !important; */
 }
 .cardwcu_bottom{
@@ -52,7 +52,7 @@ color: #10182F;
     top: 76px;
     left: 0;
     z-index: 10000;
-    animation: grow 1s;
+    animation: grow 1.5s;
 }
 
 @keyframes grow{
@@ -60,14 +60,14 @@ color: #10182F;
         opacity: 1;
         transform: scale(0) ;
     }
-    50%{
+    /* 50%{
         opacity: 1;
         transform: scale(.6) ;
     }
     90%{
         opacity: .9;
         transform: scale(1.2) ; 
-    }
+    } */
     100%{
         margin-top: 0;
         width: 100vw;
