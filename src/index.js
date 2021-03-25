@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import bootstrap from 'bootstrap'
 import { HashRouter } from 'react-router-dom';
+import AuthProvider from './Context/AuthContext';
 
 
 ReactDOM.render(
+
   <React.StrictMode>
     <HashRouter>
-    <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')

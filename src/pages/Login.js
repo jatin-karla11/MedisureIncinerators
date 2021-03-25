@@ -1,27 +1,67 @@
-import React from 'react'
-import './Login.css'
+import React, { useState , useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
+import ServerService from '../ServerService';
+import './Login.css';
 
-function Login({location}) {
-    return (
-      <div className='login'>
-        <div className='login_container'>
-          <div className='login_container_title'>
-            Enter your credentials for signing in : {location.whichLogin}
-          </div>
-          <br></br>
-          <div className='login_container_input'>
-            <label style={{ width: "80px", fontWeight: "500" }}>Email : </label>
-            <input type="text"></input>
-          </div>
-          <div className='login_container_input'>
-            <label style={{ width: "80px", fontWeight: "500" }}>
-              Password :{" "}
-            </label>
-            <input type="password"></input>
-          </div>
+function Login({ location }) {
+  const {setUser} = useContext(AuthContext)
+
+  const history = useHistory();
+
+  const [input, setInput] = useState({
+    email: "",
+    password: ""
+  })
+
+  const handleChange = (e) => {
+    setInput(pre => {
+      return {
+        ...pre,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
+
+  const submit = () => {
+    ServerService.login(input).then(result => {
+      console.log(result);
+      setUser(result.data.user)
+      if (result.data.user.role === "client")
+        history.push('/client');
+      else if (result.data.user.role === "admin")
+        history.push('/admin');
+      else if (result.data.user.role === "pcb")
+        history.push('/pcb');
+
+    }).catch(err => {
+       console.log(err , "eror ")
+    })
+
+  }
+
+
+  return (
+    <div className='login'>
+      <div className='login_container'>
+        <div className='login_container_title'>
+          Enter your credentials for signing in : {location.whichLogin}
         </div>
+        <br></br>
+        <div className='login_container_input'>
+          <label style={{ width: "80px", fontWeight: "500" }}>Email : </label>
+          <input type="text" onChange={handleChange} name="email" value={input.email} ></input>
+        </div>
+        <div className='login_container_input'>
+          <label style={{ width: "80px", fontWeight: "500" }}>
+            Password :{" "}
+          </label>
+          <input onChange={handleChange} name="password" value={input.password} type="password"></input>
+        </div>
+        <button onClick={submit} >submit</button>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Login
