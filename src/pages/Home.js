@@ -46,17 +46,17 @@ function Home() {
           </div>
           <div className='home_values_content'>
             {/* <ValueCard cardwcu="" title="Vision" content="Clean Healthy and well protected environment supporting a sustainable Medical fraternity and economy."/> */}
-            <ValueCard
+            <ServiceCard
               cardwcu={mih}
               title='Entrepreneurial Spirit'
               content='We believe in providing modern effective services for the proper disposal of bio-medical waste without any adverse effect on human health and environment. We stand together to make a better world for everyone.'
             />
-            <ValueCard
+            <ServiceCard
               cardwcu={ci}
               title='Continual Improvement'
               content='We believe in continuous improvement of environment and health-care activities and so we support, trust and value our Members and empower each other to make decisions.'
             />
-            <ValueCard
+            <ServiceCard
               cardwcu={sr}
               title='Social responsibility'
               content='To protect the health of all people and environment, we must address the effects of Bio-Medical Waste. The movement to eliminate dangerous waste must move forward in partnership with prescribed authorities.'
