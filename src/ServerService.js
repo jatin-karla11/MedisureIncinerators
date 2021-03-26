@@ -37,5 +37,11 @@ export default {
     // },
     isAuthorized: () => {
         return axios.get(`${url}/auth`).then(res => res)
+    },
+    client: () => {
+        return axios.get(`${url}/auth`).then(res => res)
+    },
+    admin: () => {
+        return axios.get(`${url}/auth`).then(res => res)
     }
 }

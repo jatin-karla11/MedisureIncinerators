@@ -28,7 +28,6 @@ function App() {
       <ProtectedRoute exact path="/pcb" component={PCB}/>
       <ProtectedRoute exact path="/client" component={Client}/>
       <Redirect to="/" />
-
       </Switch>
       <Footer/>
     </div>
