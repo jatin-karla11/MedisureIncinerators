@@ -5,6 +5,7 @@ function Admin() {
     return (
         // user && 
         <div className="admin">
+            
             <h1>admin</h1>
             {/* <div className="admin_header">
                 <div className="admin_header_title">{user.name}</div>
