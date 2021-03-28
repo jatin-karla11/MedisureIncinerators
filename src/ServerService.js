@@ -35,13 +35,24 @@ export default {
     //         return res
     //     })
     // },
-    isAuthorized: () => {
-        return axios.get(`${url}/auth`).then(res => res)
+    isClientAuthorized: () => {
+        return axios.get(`${url}/client/auth`).then(res => res)
+    },
+    isAdminAuthorized: () => {
+        return axios.get(`${url}/admin/auth`).then(res => res)
+
+    },
+    isPcbAuthorized: () => {
+        return axios.get(`${url}/pcb/auth`).then(res => res)
+
     },
     client: () => {
-        return axios.get(`${url}/auth`).then(res => res)
+        return axios.get(`${url}/client`).then(res => res)
     },
     admin: () => {
-        return axios.get(`${url}/auth`).then(res => res)
+        return axios.get(`${url}/admin`).then(res => res)
+    },
+    pcb: () => {
+        return axios.get(`${url}/pcb`).then(res => res)
     }
 }

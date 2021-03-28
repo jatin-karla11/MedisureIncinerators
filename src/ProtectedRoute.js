@@ -5,10 +5,9 @@ import ServerService from './ServerService';
 
 export default function PrivateRoute({ component: Component, path: path, location, match, ...rest }) {
 
-    const { isAuth, setIsAuth , setUser } = useContext(AuthContext);
-
+    const { isAuth, setIsAuth, user, setUser } = useContext(AuthContext);
     useEffect(() => {
-        ServerService.isAuthorized().then(result => {
+        ServerService.isClientAuthorized().then(result => {
             console.log(result, "autharized ");
             setIsAuth(result.data.status);
             setUser(result.data.user)
@@ -20,7 +19,6 @@ export default function PrivateRoute({ component: Component, path: path, locatio
     }, [])
 
     return (
-        isAuth &&
         <Route {...rest} path={path} render={(probs) => {
             if (isAuth) {
                 return <Component />
