@@ -90,7 +90,7 @@ function Client() {
               <div className="row col-lg-12 mx-auto">
 
                 <div className='col-lg-6'>
-                  <strong>Email : </strong> <strong style={{ fontSize: "17px" }}>  {user.email}</strong>
+                  <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
                 </div>
                 <div className='col-lg-6'>
                   <strong>Designation :</strong>  {user.personDesignation}

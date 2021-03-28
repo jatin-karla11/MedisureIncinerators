@@ -11,7 +11,6 @@ import Signup from './pages/Signup';
 import Admin from './pages/Admin'
 import Client from './pages/Client'
 import ProtectedRoute from './ProtectedRoute'
-import ProtectedAdminRoute from './ProtectedAdminRoute'
 
 import axios from 'axios'
 import PCB from './pages/PCB';
