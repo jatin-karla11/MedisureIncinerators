@@ -5,13 +5,19 @@ import { Link } from 'react-scroll';
 import bm from './layout images/bm.png'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
+import { useHistory } from 'react-router-dom'
+
+
 function Header() {
 
   const { isAuth, setIsAuth, user } = useContext(AuthContext)
+  const history = useHistory()
+
 
   const logout = () => {
     ServerService.logout(user.role).then(result => {
       setIsAuth(result.data.status);
+      history.push("/")
     }).catch(err => {
       console.log("error while logging out ", err)
     })
