@@ -31,7 +31,7 @@ function Login({ location }) {
         history.push('/client');
       else if (result.data.user.role === "admin")
         history.push('/admin');
-      else if (result.data.user.role === "pbc")
+      else if (result.data.user.role === "pcb")
         history.push('/pcb');
 
     }).catch(err => {

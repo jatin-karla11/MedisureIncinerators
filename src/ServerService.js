@@ -27,8 +27,9 @@ export default {
         return axios.post(`${url}/register`, user).then(data => data);
     },
 
-    logout: () => {
-        return axios.get(`/logout`).then(data => data);
+    logout: (user) => {
+        console.log(user , "role")
+        return axios.get(`${url}/${user}/logout`).then(data => data);
     },
     // isAuthorized: (authurl, user) => {
     //     return axios.post(`${url}`, user).then(res => {
@@ -54,5 +55,9 @@ export default {
     },
     pcb: () => {
         return axios.get(`${url}/pcb`).then(res => res)
+    },
+    
+    home: () => {
+        return axios.get(`${url}/home`).then(res => res)
     }
 }
