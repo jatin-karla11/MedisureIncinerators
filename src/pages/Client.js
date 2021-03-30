@@ -19,6 +19,7 @@ function Client() {
 
   const logout = () => {
     ServerService.logout(user.role).then(response => {
+      setIsAuth(false)
       history.push("/login")
     }).catch(err => {
       alert("error while logging out ");
@@ -27,7 +28,7 @@ function Client() {
 
   return (
     user &&
-    user.role === "admin" ?
+    user.role === "client" ?
     <div className='client'>
       <div className="container client_header_title"><span className="welcome"> Welcome , </span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.estbName} </strong> </div>
       <div className="container">

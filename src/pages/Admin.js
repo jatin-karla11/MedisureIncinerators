@@ -16,6 +16,7 @@ function Admin() {
 
   const logout = () => {
     ServerService.logout(user.role).then(response => {
+      setIsAuth(false)
       history.push("/login")
     }).catch(err => {
       alert("error while logging out ");
