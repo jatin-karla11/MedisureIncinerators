@@ -78,6 +78,9 @@ function Carousel() {
     sideShow();
     return () => {
       clearInterval(intervalId);
+      sideShow()
+      reset();
+      next()
     };
   }, []);
 

@@ -59,5 +59,14 @@ export default {
     
     home: () => {
         return axios.get(`${url}/home`).then(res => res)
+    },
+    getClients : () =>{
+        return axios.get(`${url}/auth/admin/get-clients`).then(res => res)
+    },
+    addCertificate : (data)=>{
+        return axios.post(`${url}/auth/admin/add-certificate` , data).then(res => res)
+    },
+    getSpecificClient : (data)=>{
+        return axios.post(`${url}/auth/admin/get-client` , data).then(res => res)
     }
 }

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import './Admin.css'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
 function Admin() {
@@ -16,8 +16,8 @@ function Admin() {
 
   const logout = () => {
     ServerService.logout(user.role).then(response => {
-      setIsAuth(false)
-      history.push("/login")
+      setIsAuth(false);
+      history.push("/")
     }).catch(err => {
       alert("error while logging out ");
     })
@@ -53,6 +53,10 @@ function Admin() {
             <div className="container admin_header_content_buttons">
               <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
+            </div>
+
+            <div>
+            <Link to = "/auth/admin/clients">Our Clients</Link>
             </div>
           </div>
         </div>

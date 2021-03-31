@@ -1,17 +1,23 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
-import { Link } from 'react-scroll';
+// import { NavLink } from 'react-scroll';
 import bm from './layout images/bm.png'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
+import { useHistory } from 'react-router-dom'
+
+
 function Header() {
 
   const { isAuth, setIsAuth, user } = useContext(AuthContext)
+  const history = useHistory()
+
 
   const logout = () => {
     ServerService.logout(user.role).then(result => {
       setIsAuth(result.data.status);
+      history.push("/")
     }).catch(err => {
       console.log("error while logging out ", err)
     })
@@ -22,11 +28,11 @@ function Header() {
     <div className="header" id="headerid">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" style={{ cursor: "pointer" }} to="homeid">
+          <NavLink className="navbar-brand" style={{ cursor: "pointer" }} to="homeid">
             <img className="medisurelogo" src={bm} alt="" />
             <span className="medisure-brand">Medisure Incinerators</span>
 
-          </Link>
+          </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -39,21 +45,21 @@ function Header() {
               {
                 isAuth ?
                   <>
-                      {/* <Link className="nav-link" offset={-70} activeClassName="menu_active" to="/client">{user.role}</Link> */}
+                      {/* <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="/client">{user.role}</NavLink> */}
                     <li onClick={logout} className="nav-item">LogOut</li>
                   </> :
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="aboutid">About</Link>
+                      <NavLink className="nav-link" offset={-70}  activeClassName="menu_active" to="aboutid">About</NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</Link>
+                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="documentid">Documents</Link>
+                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="documentid">Documents</NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</Link>
+                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="/signin">Sign-In</NavLink>

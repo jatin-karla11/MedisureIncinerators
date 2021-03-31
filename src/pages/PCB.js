@@ -17,10 +17,10 @@ function PCB() {
 
   const logout = () => {
     ServerService.logout(user.role).then(response => {
-      setIsAuth(false)
-      history.push("/login")
+      setIsAuth(false);
+      history.push("/");
     }
-
+      
     ).catch(err => alert("error while logging out "))
   }
 

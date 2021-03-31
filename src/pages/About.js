@@ -36,7 +36,7 @@ function About() {
                   services to health care facilities of Khandwa, Khargone, and
                   Burhanpur districts.
                 </p>
-                <button id="about_readmore" className="about_readmore" onClick={handleShow}>Read More  &nbsp; <i class="fas fa-greater-than"></i></button>
+                <button id="about_readmore" className="about_readmore" onClick={handleShow}>Read More  &nbsp; <i className="fas fa-greater-than"></i></button>
                 <Modal
         show={show}
         onHide={handleClose}
@@ -66,8 +66,6 @@ function About() {
       </Modal>
               </div>
             </div>
-           
-
 
     
           </div>
