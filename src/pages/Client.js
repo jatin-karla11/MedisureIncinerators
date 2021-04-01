@@ -102,7 +102,10 @@ function Client() {
           </div>
         </div>
         {/* certificate download btn  */}
-        <a href= {`${process.env.REACT_APP_BACKEND_URL}/api/resume_${user.email}.docx`} download target = "_blank"  >Download certificate</a>
+        {
+          user.certificatePath &&
+          <a href={`${process.env.REACT_APP_BACKEND_URL}/api/resume_${user.certificatePath}`} download target="_blank"  >Download certificate</a>
+        }
         <div>
 
         </div>

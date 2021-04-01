@@ -12,7 +12,7 @@ function Header() {
 
   const { isAuth, setIsAuth, user } = useContext(AuthContext)
   const history = useHistory()
-  
+
   // var user1="/"+user.role;
   const logout = () => {
     ServerService.logout(user.role).then(result => {
@@ -25,6 +25,7 @@ function Header() {
   }
 
   return (
+    user &&
     <div className="header" id="headerid">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -45,15 +46,15 @@ function Header() {
               {
                 isAuth ?
                   <>
-                      {/* <li className="nav-item">
-                      <NavLink className="nav-link" activeClassName="menu_active" to={user1}>Dashboard</NavLink>
-                    </li> */}
-                    <li onClick={logout} className="nav-item">LogOut</li>
-                    
+                    <li className="nav-item">
+                      <NavLink className="nav-link" activeClassName="menu_active" to= { user.role === 'client' ? '/client' : user.role === 'pcb' ? '/pcb' : '/admin' }>Dashboard</NavLink>
+                    </li>
+                    < li onClick={logout} className="nav-item">LogOut</li>
+
                   </> :
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" offset={-70}  activeClassName="menu_active" to="aboutid">About</Link>
+                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="aboutid">About</Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</Link>
@@ -74,8 +75,8 @@ function Header() {
 
           </div>
         </div>
-      </nav>
-    </div>
+      </nav >
+    </div >
   )
 }
 
