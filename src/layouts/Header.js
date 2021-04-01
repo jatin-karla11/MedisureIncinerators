@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
-// import { NavLink } from 'react-scroll';
+import { Link } from 'react-scroll';
 import bm from './layout images/bm.png'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
@@ -12,8 +12,8 @@ function Header() {
 
   const { isAuth, setIsAuth, user } = useContext(AuthContext)
   const history = useHistory()
-
-
+  
+  // var user1="/"+user.role;
   const logout = () => {
     ServerService.logout(user.role).then(result => {
       setIsAuth(result.data.status);
@@ -45,21 +45,24 @@ function Header() {
               {
                 isAuth ?
                   <>
-                      {/* <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="/client">{user.role}</NavLink> */}
+                      {/* <li className="nav-item">
+                      <NavLink className="nav-link" activeClassName="menu_active" to={user1}>Dashboard</NavLink>
+                    </li> */}
                     <li onClick={logout} className="nav-item">LogOut</li>
+                    
                   </> :
                   <>
                     <li className="nav-item">
-                      <NavLink className="nav-link" offset={-70}  activeClassName="menu_active" to="aboutid">About</NavLink>
+                      <Link className="nav-link" offset={-70}  activeClassName="menu_active" to="aboutid">About</Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</NavLink>
+                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="serviceid">Services</Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="documentid">Documents</NavLink>
+                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="documentid">Documents</Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</NavLink>
+                      <Link className="nav-link" offset={-70} activeClassName="menu_active" to="contactid">Contact</Link>
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link" offset={-70} activeClassName="menu_active" to="/signin">Sign-In</NavLink>
