@@ -1,0 +1,25 @@
+@media only screen and (max-width: 768px) {
+  .btn {
+    float: right;
+  }
+}
+
+.clientmain {
+  border: 3px solid black;
+  box-shadow: 5px gray;
+  padding: 15px 20px;
+  margin: 10px;
+  background-color: #e0e0e0;
+}
+.vert {
+  border: 1px solid black;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn {
+  background: #006400;
+  color: whitesmoke;
+  align-items: right;
+}
