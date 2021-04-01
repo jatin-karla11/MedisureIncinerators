@@ -25,7 +25,6 @@ function Header() {
   }
 
   return (
-    user &&
     <div className="header" id="headerid">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -45,6 +44,7 @@ function Header() {
 
               {
                 isAuth ?
+                user &&
                   <>
                     <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to= { user.role === 'client' ? '/client' : user.role === 'pcb' ? '/pcb' : '/admin' }>Dashboard</NavLink>
