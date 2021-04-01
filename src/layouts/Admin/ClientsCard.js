@@ -18,7 +18,7 @@ function ClientsCard({ client, id }) {
                <strong ><span style={{color:"#006400",margin:"30px"}}>Email -</span> </strong> <strong style={{ fontSize: "15px",color:"black"}}>  {client.email}</strong>
                </div>
                 <div class="col-md-2">
-                <button  className="btn" >Open Clients</button>
+                <button  className="btn" >Open Client</button>
                 </div>
                 </div>
                 
