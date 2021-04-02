@@ -68,5 +68,8 @@ export default {
     },
     getSpecificClient : (data)=>{
         return axios.post(`${url}/auth/admin/get-client` , data).then(res => res)
+    },
+    editProfile : (data)=>{
+        return axios.post(`${url}/auth/editprofile` , data).then(res => res)
     }
 }

@@ -15,6 +15,7 @@ function SingleClient({ location, match }) {
         formdata.append("email", client.email);
         formdata.append("file", file)
         ServerService.addCertificate(formdata).then(result => {
+            setClient(result.data.client)
             alert("certificated is added ")
         }).catch(err => {
             console.log(err, "err in adding certificate ")

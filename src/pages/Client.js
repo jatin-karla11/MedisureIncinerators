@@ -1,12 +1,13 @@
-import React, { useContext, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import './Client.css';
 import { AuthContext } from '../Context/AuthContext';
 import ServerService from '../ServerService'
 import { Button, Card } from 'react-bootstrap';
+import Signin from './Signin';
+import Signup from './Signup';
 function Client() {
   const { user, setIsAuth, setUser } = useContext(AuthContext);
-
   const history = useHistory()
 
   useEffect(() => {
@@ -60,7 +61,9 @@ function Client() {
               </div>
             </div>
             <div className="container client_header_content_buttons">
-              <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
+              <Link to = "/auth/editprofile">
+                <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
+              </Link>
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
             </div>
           </div>

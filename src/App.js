@@ -15,7 +15,9 @@ import Clients from './pages/Admin/Clients/Clients'
 import axios from 'axios'
 import PCB from './pages/PCB';
 import SingleClient from './pages/Admin/Clients/SingleClient'
+import Editprofile from  './pages/Editprofile/Editprofile'
 axios.defaults.withCredentials = true;
+
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
         <Route exact path="/admin" component={Admin} />
         <Route exact path = "/auth/admin/clients" component = {Clients} />
         <Route path = "/auth/admin/clients/:clientid" component = {SingleClient} />
-
+        <Route path = "/auth/editprofile" component = {Editprofile} />
         {/* <ProtectedRoute exact path="/pcb" component={PCB}/> */}
         {/* <ProtectedRoute exact path="/client" component={Client}/> */}
         {/* <ProtectedAdminRoute exact path="/admin" component={Admin} /> */}
