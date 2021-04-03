@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import bootstrap from 'bootstrap'
 import { HashRouter } from 'react-router-dom';
 import AuthProvider from './Context/AuthContext';
+import ScrollToTop from './pages/ScorllToTop';
 
 
 ReactDOM.render(
@@ -13,6 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <AuthProvider>
+    <ScrollToTop/>
         <App />
       </AuthProvider>
     </HashRouter>

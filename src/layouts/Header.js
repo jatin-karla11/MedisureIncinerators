@@ -6,6 +6,7 @@ import bm from './layout images/bm.png'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
 import { useHistory } from 'react-router-dom'
+import milogo from './layout images/milogo.png'
 
 
 function Header() {
@@ -29,7 +30,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <NavLink className="navbar-brand" style={{ cursor: "pointer" }} to="homeid">
-            <img className="medisurelogo" src={bm} alt="" />
+            <img className="medisurelogo" src={milogo} alt="" />
             <span className="medisure-brand">Medisure Incinerators</span>
 
           </NavLink>
@@ -39,7 +40,7 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <NavLink className="nav-link active" activeClassName="menu_active" aria-current="page" to="/">Home</NavLink>
+                <NavLink className="nav-link" activeClassName="menu_active" aria-current="page" to="/">Home</NavLink>
               </li>
 
               {
@@ -49,7 +50,9 @@ function Header() {
                     <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to={user.role === 'client' ? '/client' : user.role === 'admin' ? '/admin' : '/pcb'}>Dashboard</NavLink>
                     </li>
-                    < li onClick={logout} className="nav-item">LogOut</li>
+                    < li onClick={logout} className="nav-item">
+                    <div className="nav-link">LogOut</div>
+                    </li>
 
                   </> :
                   <>

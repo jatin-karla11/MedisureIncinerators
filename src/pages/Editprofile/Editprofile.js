@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ServerService from '../../ServerService'
 import { AuthContext } from '../../Context/AuthContext'
+import { useHistory } from 'react-router-dom'
+
 
 function Editprofile() {
     const { user, setIsAuth, setUser } = useContext(AuthContext);
+    const history = useHistory()
 
     const [data, setData] = useState({
         estbName: "",
@@ -43,8 +46,10 @@ function Editprofile() {
         ServerService.editProfile(data).then(result => {
             setUser(result.data.user);
             alert("updated")
+            history.push(`/${result.data.user.role}`);
+            
         }).catch(err => {
-
+            alert("Please check your internet connection!!")
         })
     }
     return (
