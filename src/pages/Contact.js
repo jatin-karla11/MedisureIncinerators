@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-
+import ServerService from '../ServerService'
 
 const useStyles = makeStyles((theme) => ({
 }));
@@ -52,7 +52,14 @@ function Contact() {
     }
     console.log(data);
 
-    axios.post('http://localhost:1337/form', data).then(res => {
+    ServerService.sendEmail(data).then(result => {
+      alert("mail sent")
+      handleClick();
+      resetForm();
+    }).catch(err => console.log(err, "err in /client"))
+
+
+    /*axios.post('http://localhost:1337/form', data).then(res => {
       handleClick();
       resetForm();
     }).catch(() => {
@@ -66,7 +73,7 @@ function Contact() {
       // console.log("message not saved to database!!!")
       alert("check your internet connection!")
     })
-
+*/
   }
 
   const [name, setName] = useState("");

@@ -50,12 +50,12 @@ function Admin() {
                 </div>
               </div>
             </div>
-            <div className="container admin_header_content_buttons">
-              <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
-              <Link to = "/auth/admin/clients"><button   className="btn" style={{ background: "#006400", color: "whitesmoke" }}>Our clients</button></Link>
+            
+            <div className=" admin_header_content_buttons">
+              <Link to = "/auth/admin/clients"><button   className="btn" style={{ background: "#006400", color: "whitesmoke",float:"left",alignItems:"left" }}>Our clients</button></Link>
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
             </div> 
-          </div>
+            </div>
         </div>
       </div>
       :

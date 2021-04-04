@@ -13,9 +13,9 @@ function About() {
   const handleShow = () => setShow(true);  
   return (
     
-      <>
+      <div className="about" >
         <div className='col-lg-12 ' id='about_div'></div>
-        <div className='container'>
+        <div className='container card' style={{border:"none",background:"white"}}>
           <div className='row'>
             <div className='col-lg-5 mb-3'>
               <div className='about_image'>
@@ -70,7 +70,7 @@ function About() {
     
           </div>
         </div>
-      </>
+      </div>
     );
 }
 

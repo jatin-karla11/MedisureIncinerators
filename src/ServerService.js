@@ -71,5 +71,8 @@ export default {
     },
     editProfile : (data)=>{
         return axios.post(`${url}/auth/editprofile` , data).then(res => res)
+    },
+    sendEmail:(data)=>{
+        return axios.post(`${url}/form`,data).then(res=>res)
     }
 }

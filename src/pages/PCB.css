@@ -14,9 +14,7 @@
   font-size: 30px;
 }
 .pcb_header_content_buttons {
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
+  padding: 10px;
 }
 
 .card {

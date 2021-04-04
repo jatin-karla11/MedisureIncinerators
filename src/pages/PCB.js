@@ -52,8 +52,8 @@ function PCB() {
               </div>
             </div>
             <div className="container pcb_header_content_buttons">
-              <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
-              <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
+              
+              <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke",float:"right"}}>LOGOUT</button>
             </div>
           </div>
         </div>
