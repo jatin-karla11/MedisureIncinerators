@@ -10,6 +10,9 @@ function Client() {
   const { user, setIsAuth, setUser } = useContext(AuthContext);
   const history = useHistory()
 
+  const [year,setYear]=useState("");
+  
+
   useEffect(() => {
 
     ServerService.client().then(result => {
@@ -26,6 +29,20 @@ function Client() {
       alert("error while logging out ");
     })
   }
+  var years=[];
+    var currentYear=(new Date()).getFullYear();
+    
+    var earliestYear=currentYear-10;
+    while(earliestYear<=currentYear){
+
+      years.push(currentYear);
+      currentYear-=1;
+    }
+  
+    function handleChange(e){
+      setYear(e.target.value);
+    }
+  
 
   return (
     user &&
@@ -69,14 +86,7 @@ function Client() {
           </div>
         </div>
         <div className='container client-body'>
-          <table>
-            <th>
-              <td>xx</td>
-              <td>xx</td>
-              <td>xx</td>
-
-            </th>
-          </table>
+         
         </div>
         <div className="container">
           <div className="card" >
@@ -109,8 +119,27 @@ function Client() {
           user.certificatePath &&
           <a href={`${process.env.REACT_APP_BACKEND_URL}/api/resume_${user.certificatePath}`} download target="_blank"  >Download certificate</a>
         }
-        <div>
-
+        <div className="container">
+         <div className="row">
+          <div className="container col-md-3" >
+          <select className="choose " id="ddlYears" onChange={handleChange}>
+            <option value=" ">Select Year</option>
+            {years.map(allYears=>{
+              return <option key={allYears} value={allYears}>{allYears}</option>
+            })}
+            </select>
+        <button className="btn btn-2"  style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Registration</strong></button>
+        </div>
+           
+        <div className="container col-md-3">
+          <select className="choose" id="ddlYears" onChange={handleChange} > <option value=" ">Select Year</option>
+            {years.map(allYears=>{
+              return <option key={allYears} value={allYears}>{allYears}</option>
+            })}
+            </select>
+        <button className="btn btn-2" style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Annual Report</strong></button>
+        </div>
+        </div>
         </div>
       </div> :
       <h1>You do have access to this page  </h1>

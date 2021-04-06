@@ -48,3 +48,24 @@ td {
   border: 4px solid black;
   background-color: #e0e0e0;
 }
+.btn-2 {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: large;
+  margin-top: 6px;
+  height: 40px;
+  width: auto;
+}
+.choose {
+  margin-top: 40px;
+  margin: auto;
+}
+.row {
+  display: flex;
+}
+@media only screen and (max-width: 1300px) {
+  .btn-2 {
+    margin-right: 100px;
+    width: 250px;
+  }
+}
