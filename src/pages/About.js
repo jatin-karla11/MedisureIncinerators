@@ -3,7 +3,7 @@ import './About.css'
 import $ from 'jquery';
 import { Modal } from 'react-bootstrap';
 import {Button} from '@material-ui/core'
-import bm from '../layouts/layout images/bm.png'
+import logo from '../layouts/layout images/logo.png'
 
 function About() {
 
@@ -44,7 +44,7 @@ function About() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-        <img className="medisurelogo" src={bm} alt=""/>  
+        <img className="medisurelogo" src={logo} alt=""/>  
           <Modal.Title style={{color:"#DD501D"}}>&nbsp;Medisure Incinerators</Modal.Title>
         </Modal.Header>
         <Modal.Body>

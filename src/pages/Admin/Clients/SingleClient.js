@@ -66,13 +66,12 @@ function SingleClient({ location, match }) {
             placeItems: "center",
             width: "100vw",
             height: "100vh",
-            paddingTop: "70px"
+            paddingTop: "10px"
         }}>
             <div className="container">
-
-                <div>
-                    <h2>{client.personName}</h2>
-                </div>
+                        <h1 className="title">{client.personName}</h1>
+                    
+               
 
                 <div className="row">
                     <div className="col-md-6">

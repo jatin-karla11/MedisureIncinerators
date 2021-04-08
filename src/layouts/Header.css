@@ -1,42 +1,40 @@
-.header{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
-.medisurelogo{
-    height: 50px;
-    margin-right: 10px;
+.medisurelogo {
+  height: 50px;
+  margin-right: 10px;
 }
-.medisure-brand{
-    
+.medisure-brand {
 }
-.navbar-brand{
-    font-size: 26px !important;
-    font-weight: 600 !important;
-    color: rgb(33, 139, 143) !important;
+.navbar-brand {
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: rgb(33, 139, 143) !important;
 }
-.nav-item{
-    font-size: 18px !important;
-    margin: 0 15px;
-    cursor: pointer;
-    /* padding: 0 20px; */
+.nav-item {
+  font-size: 18px !important;
+  margin: 0 15px;
+  cursor: pointer;
+  /* padding: 0 20px; */
 }
-.menu_active{
-    font-weight: bold !important;
-    /* color: red !important; */
-    /* background-color: black !important; */
+.menu_active {
+  font-weight: bold !important;
+  /* color: red !important; */
+  /* background-color: black !important; */
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-    .nav-item{
-        margin: 0;
-
-    }
-    .navbar-brand{
-        font-size: 20px !important;
-    }
-    .medisurelogo{
-        height: 30px;
-        margin-right: 5px;
-    }
+  .nav-item {
+    margin: 0;
+  }
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+  .medisurelogo {
+    height: 30px;
+    margin-right: 5px;
+  }
 }

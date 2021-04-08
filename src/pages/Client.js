@@ -84,11 +84,22 @@ function Client() {
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
             </div>
           </div>
-        </div>
-        <div className='container client-body'>
+        
+        <div className='container'>
+        <div className="row">
+        <button className="btn btn-2 col-lg-4"  style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Registration</strong></button>    
+        <select className="choose col-lg-3" id="ddlYears" onChange={handleChange}>
+            <option value=" ">Select Year</option>
+            {years.map(allYears=>{
+              return <option key={allYears} value={allYears}>{allYears}</option>
+            })}
+            </select>
          
+        <button className="btn btn-2 col-lg-4" style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Annual Report</strong></button>
         </div>
-        <div className="container">
+       
+        </div>
+        
           <div className="card" >
             <div className="card-body">
               <div className=' client_header_content'>
@@ -113,34 +124,15 @@ function Client() {
               </div>
             </div>
           </div>
+         
         </div>
-        {/* certificate download btn  */}
+       
+        {/* certificate download btn  
         {
           user.certificatePath &&
           <a href={`${process.env.REACT_APP_BACKEND_URL}/api/resume_${user.certificatePath}`} download target="_blank"  >Download certificate</a>
         }
-        <div className="container">
-         <div className="row">
-          <div className="container col-md-3" >
-          <select className="choose " id="ddlYears" onChange={handleChange}>
-            <option value=" ">Select Year</option>
-            {years.map(allYears=>{
-              return <option key={allYears} value={allYears}>{allYears}</option>
-            })}
-            </select>
-        <button className="btn btn-2"  style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Registration</strong></button>
-        </div>
-           
-        <div className="container col-md-3">
-          <select className="choose" id="ddlYears" onChange={handleChange} > <option value=" ">Select Year</option>
-            {years.map(allYears=>{
-              return <option key={allYears} value={allYears}>{allYears}</option>
-            })}
-            </select>
-        <button className="btn btn-2" style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Annual Report</strong></button>
-        </div>
-        </div>
-        </div>
+       */}
       </div> :
       <h1>You do have access to this page  </h1>
   );

@@ -6,7 +6,7 @@ import bm from './layout images/bm.png'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
 import { useHistory } from 'react-router-dom'
-import milogo from './layout images/milogo.png'
+import logo from './layout images/logo.png'
 
 
 function Header() {
@@ -30,7 +30,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <NavLink className="navbar-brand" style={{ cursor: "pointer" }} to="homeid">
-            <img className="medisurelogo" src={milogo} alt="" />
+            <img className="medisurelogo" src={logo} alt="" />
             <span className="medisure-brand">Medisure Incinerators</span>
 
           </NavLink>
