@@ -51,6 +51,13 @@ function SingleClient({ location, match }) {
         setYear(e.target.value);
     }
 
+    const deleteCertificate = (text , type) => {
+        ServerService.deleteCertificate({ text , type }).then(result => {
+            console.log(result)
+        }).catch(err => {
+            console.log(err);
+        })
+    }
 
     return (
         client &&
@@ -74,7 +81,12 @@ function SingleClient({ location, match }) {
                             <div className="card Box">
                                 {
                                     client.registrationCertificatePath && client.registrationCertificatePath.map((ele, idx) => {
-                                        return <div>{ele}</div>
+                                        return (
+                                            <div>
+                                                <div>{ele}</div>
+                                                <button onClick={() => deleteCertificate(ele, "registrationCertificatePath")} >X</button>
+                                            </div>
+                                        )
                                     })
                                 }
                             </div>
@@ -86,7 +98,12 @@ function SingleClient({ location, match }) {
                             <div className="card Box">
                                 {
                                     client.reportCertificatePath && client.reportCertificatePath.map((ele, idx) => {
-                                        return <div>{ele}</div>
+                                        return (
+                                            <div>
+                                                <div>{ele}</div>
+                                                <button onClick={() => deleteCertificate(ele, "reportCertificatePath")} >X</button>
+                                            </div>
+                                        )
                                     })
                                 }
                             </div>

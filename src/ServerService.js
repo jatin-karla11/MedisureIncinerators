@@ -74,5 +74,8 @@ export default {
     },
     sendEmail:(data)=>{
         return axios.post(`${url}/form`,data).then(res=>res)
+    },
+    deleteCertificate : (data)=>{
+        return axios.post(`${url}/admin/delete-certificate`,data).then(res=>res)
     }
 }
