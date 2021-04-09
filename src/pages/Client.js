@@ -49,6 +49,7 @@ function Client() {
 
     let url1 = user.reportCertificatePath.filter(ele => ele.includes(e.target.value))
     let url2 = user.registrationCertificatePath.filter(ele => ele.includes(e.target.value))
+    
     setDownloadUrl({
       reportCertificatePath: url1[0],
       registrationCertificatePath: url2[0]
@@ -101,7 +102,7 @@ function Client() {
             <div className="row">
 
               {
-                year ?
+                year && downloadUrl.registrationCertificatePath ?
                   <a className="btn btn-2 col-lg-4"
                     href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.registrationCertificatePath}`} download target="_blank"
                     style={{ background: "#006400", color: "whitesmoke" }}
@@ -122,7 +123,7 @@ function Client() {
                 })}
               </select>
               {
-                year ?
+                year && downloadUrl.reportCertificatePath ?
                   <a className="btn btn-2 col-lg-4"
                     href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                     style={year ?

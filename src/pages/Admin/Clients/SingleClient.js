@@ -8,7 +8,6 @@ import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 
 function SingleClient({ location, match }) {
 
-    // const [client , setClient ] = useState(location.state);
     const [client, setClient] = useState({});
     const [file, setFile] = useState(null);
     const { setIsAuth } = useContext(AuthContext)
@@ -26,20 +25,41 @@ function SingleClient({ location, match }) {
 
 
 
-
     const addCertificate = (type) => {
+        let count = 1;
         const formdata = new FormData();
         formdata.append("email", client.email);
         formdata.append("type", type);
         formdata.append("year", year)
         formdata.append("file", file);
-        ServerService.addCertificate(formdata).then(result => {
-            setClient(result.data.client)
-            alert("certificated is added ")
-        }).catch(err => {
-            console.log(err, "err in adding certificate ")
-        })
+
+        if (type === "registration") {
+            console.log("inside")
+            client.registrationCertificatePath.forEach(ele => {
+                if (ele.includes(year)) {
+                    count = 0
+                    alert('already uploaded the document ')
+                }
+            })
+
+        } else {
+            client.reportCertificatePath.forEach(ele => {
+                if (ele.includes(year)) {
+                    count = 0
+                    alert('already uploaded the document ')
+                }
+            })
+        }
+        if (count) {
+            ServerService.addCertificate(formdata).then(result => {
+                setClient(result.data.client)
+                alert("certificated is added ")
+            }).catch(err => {
+                console.log(err, "err in adding certificate ")
+            })
+        }
     }
+
 
 
     var years = [];
@@ -56,22 +76,22 @@ function SingleClient({ location, match }) {
 
     const deleteCertificate = (text, type) => {
         ServerService.deleteCertificate({ text, type, email: client.email }).then(result => {
-            if(type === "registrationCertificatePath" ){
+            if (type === "registrationCertificatePath") {
                 setClient(pre => {
                     return {
                         ...pre,
-                        registrationCertificatePath : pre.registrationCertificatePath.filter(ele => ele !== text) 
+                        registrationCertificatePath: pre.registrationCertificatePath.filter(ele => ele !== text)
                     }
                 })
-            }else{
+            } else {
                 setClient(pre => {
                     return {
                         ...pre,
-                        reportCertificatePath : pre.reportCertificatePath.filter(ele => ele !== text) 
+                        reportCertificatePath: pre.reportCertificatePath.filter(ele => ele !== text)
                     }
                 })
             }
-        
+
             console.log(result)
         }).catch(err => {
             console.log(err);
@@ -89,8 +109,6 @@ function SingleClient({ location, match }) {
         }}>
             <div className="container">
                 <h1 className="title">{client.personName}</h1>
-
-
 
                 <div className="row">
                     <div className="col-md-6">
@@ -131,14 +149,14 @@ function SingleClient({ location, match }) {
                 <div className="Single_header_content_buttons col-md-12">
                     {
                         year && file ?
-                        <>
-                            <button onClick={() => addCertificate('registration')} className="btn">Upload Registration</button>
-                            <button onClick={() => addCertificate('annualreport')} className="btn">Upload Annual Report</button>
-                        </> :
-                        <>
-                            <button disabled className="btn">Upload Registration</button>
-                            <button disabled className="btn">Upload Annual Report</button>
-                        </>
+                            <>
+                                <button onClick={() => addCertificate('registration')} className="btn">Upload Registration</button>
+                                <button onClick={() => addCertificate('annualreport')} className="btn">Upload Annual Report</button>
+                            </> :
+                            <>
+                                <button disabled className="btn">Upload Registration</button>
+                                <button disabled className="btn">Upload Annual Report</button>
+                            </>
                     }
                 </div>
                 <div className="input-group">
@@ -148,7 +166,6 @@ function SingleClient({ location, match }) {
                         })}
                     </select>
                     <center>
-                        {/* <button className="btn btn-1" style={{ background: "#006400", color: "whitesmoke", alignItems: "center" }}><strong>Choose File</strong></button> */}
                         <input type="file" name="file" onChange={(e) => {
                             console.log(e.target.files)
                             setFile(e.target.files[0])
@@ -159,25 +176,6 @@ function SingleClient({ location, match }) {
                 </div>
 
             </div>
-
-            {/* {
-                client.certificatePath &&
-                <h4 style={{
-                    padding: "10px 20px",
-                    border: "4px solid blue"
-                }}
-                >certificate  : {client.certificatePath}</h4>
-            }
-            {
-                !client.certificatePath &&
-                <>
-                    <input type="file" name="file" onChange={(e) => {
-                        console.log(e.target.files)
-                        setFile(e.target.files[0])
-                    }} />
-                    <button onClick={addCertificate} >Add certificate </button>
-                </>
-            } */}
         </div>
     )
 }
