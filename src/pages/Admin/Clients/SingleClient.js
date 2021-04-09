@@ -3,6 +3,9 @@ import ServerService from '../../../ServerService'
 import { AuthContext } from '../../../Context/AuthContext'
 import './SingleClient.css'
 import { Button } from 'bootstrap';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+
+
 function SingleClient({ location, match }) {
 
     // const [client , setClient ] = useState(location.state);
@@ -51,8 +54,24 @@ function SingleClient({ location, match }) {
         setYear(e.target.value);
     }
 
-    const deleteCertificate = (text , type) => {
-        ServerService.deleteCertificate({ text , type }).then(result => {
+    const deleteCertificate = (text, type) => {
+        ServerService.deleteCertificate({ text, type, email: client.email }).then(result => {
+            if(type === "registrationCertificatePath" ){
+                setClient(pre => {
+                    return {
+                        ...pre,
+                        registrationCertificatePath : pre.registrationCertificatePath.filter(ele => ele !== text) 
+                    }
+                })
+            }else{
+                setClient(pre => {
+                    return {
+                        ...pre,
+                        reportCertificatePath : pre.reportCertificatePath.filter(ele => ele !== text) 
+                    }
+                })
+            }
+        
             console.log(result)
         }).catch(err => {
             console.log(err);
@@ -69,9 +88,9 @@ function SingleClient({ location, match }) {
             paddingTop: "10px"
         }}>
             <div className="container">
-                        <h1 className="title">{client.personName}</h1>
-                    
-               
+                <h1 className="title">{client.personName}</h1>
+
+
 
                 <div className="row">
                     <div className="col-md-6">
@@ -83,7 +102,7 @@ function SingleClient({ location, match }) {
                                         return (
                                             <div>
                                                 <div>{ele}</div>
-                                                <button onClick={() => deleteCertificate(ele, "registrationCertificatePath")} >X</button>
+                                                <DeleteOutlineIcon style={{ cursor: "pointer" }} onClick={() => deleteCertificate(ele, "registrationCertificatePath")} />
                                             </div>
                                         )
                                     })
@@ -100,7 +119,7 @@ function SingleClient({ location, match }) {
                                         return (
                                             <div>
                                                 <div>{ele}</div>
-                                                <button onClick={() => deleteCertificate(ele, "reportCertificatePath")} >X</button>
+                                                <DeleteOutlineIcon style={{ cursor: "pointer" }} onClick={() => deleteCertificate(ele, "reportCertificatePath")} />
                                             </div>
                                         )
                                     })
@@ -110,8 +129,17 @@ function SingleClient({ location, match }) {
                     </div>
                 </div>
                 <div className="Single_header_content_buttons col-md-12">
-                    <button onClick={() => addCertificate('registration')} className="btn">Upload Registration</button>
-                    <button onClick={() => addCertificate('annualreport')} className="btn">Upload Annual Report</button>
+                    {
+                        year && file ?
+                        <>
+                            <button onClick={() => addCertificate('registration')} className="btn">Upload Registration</button>
+                            <button onClick={() => addCertificate('annualreport')} className="btn">Upload Annual Report</button>
+                        </> :
+                        <>
+                            <button disabled className="btn">Upload Registration</button>
+                            <button disabled className="btn">Upload Annual Report</button>
+                        </>
+                    }
                 </div>
                 <div className="input-group">
                     <select className="choose" id="ddlYears" onChange={handleChange} > <option value=" ">Select Year</option>

@@ -16,6 +16,7 @@ import axios from 'axios'
 import PCB from './pages/PCB';
 import SingleClient from './pages/Admin/Clients/SingleClient'
 import Editprofile from  './pages/Editprofile/Editprofile'
+import PcbSingleClient from './pages/PcbSingleClient';
 axios.defaults.withCredentials = true;
 
 
@@ -31,8 +32,11 @@ function App() {
         <Route exact path="/pcb" component={PCB} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/admin" component={Admin} />
-        <Route exact path = "/auth/admin/clients" component = {Clients} />
+        <Route exact path = "/auth/admin/clients" component = {()=> <Clients url = {`/auth/admin/clients/`} /> } />
+        <Route exact path = "/auth/pcb/clients" component = {()=> <Clients url = {`/auth/pcb/clients/`} /> } />
         <Route path = "/auth/admin/clients/:clientid" component = {SingleClient} />
+        <Route path = "/auth/pcb/clients/:clientid" component = {PcbSingleClient} />
+
         <Route path = "/auth/editprofile" component = {Editprofile} />
         {/* <ProtectedRoute exact path="/pcb" component={PCB}/> */}
         {/* <ProtectedRoute exact path="/client" component={Client}/> */}

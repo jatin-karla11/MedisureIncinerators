@@ -2,7 +2,7 @@ import React, { useEffect, useState , useContext } from 'react'
 import ServerService from '../../../ServerService'
 import ClientsCard from '../../../layouts/Admin/ClientsCard';
 import {AuthContext} from '../../../Context/AuthContext'
-function Clients({match}) {
+function Clients({match , url}) {
     const {setIsAuth} = useContext(AuthContext)
     const [clients, setClients] = useState([]);
 
@@ -26,7 +26,7 @@ function Clients({match}) {
             {
                 clients ?
                 clients.map((client , idx)=>{
-                    return <ClientsCard id = {idx + 1} key = {`client_${idx + 1}`} client = {client}/>
+                    return <ClientsCard url = {url} id = {idx + 1} key = {`client_${idx + 1}`} client = {client}/>
                 }) : 
                 <h1>there is no client</h1>
             }

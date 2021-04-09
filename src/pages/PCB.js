@@ -2,7 +2,7 @@ import './PCB.css'
 import React, { useContext, useEffect } from 'react'
 import { AuthContext } from '../Context/AuthContext'
 import ServerService from '../ServerService'
-import { useHistory } from 'react-router-dom'
+import { useHistory , Link} from 'react-router-dom'
 
 function PCB() {
   const { user, setIsAuth, setUser } = useContext(AuthContext);
@@ -20,13 +20,13 @@ function PCB() {
       setIsAuth(false);
       history.push("/");
     }
-      
+
     ).catch(err => alert("error while logging out "))
   }
 
   return (
     user &&
-    user.role === "pcb" ?
+      user.role === "pcb" ?
       <div className='pcb'>
         <div className="container pcb_header_title"><span className="welcome"> Welcome ,</span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.personName} Your PCB login is Successful !! </strong>  </div>
         <div className="container">
@@ -52,8 +52,8 @@ function PCB() {
               </div>
             </div>
             <div className="container pcb_header_content_buttons">
-              
-              <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke",float:"right"}}>LOGOUT</button>
+              <Link to="/auth/pcb/clients"><button className="btn" style={{ background: "#006400", color: "whitesmoke", float: "left", alignItems: "left" }}>M clients</button></Link>
+              <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke", float: "right" }}>LOGOUT</button>
             </div>
           </div>
         </div>

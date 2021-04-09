@@ -6,12 +6,17 @@ import ServerService from '../ServerService'
 import { Button, Card } from 'react-bootstrap';
 import Signin from './Signin';
 import Signup from './Signup';
+
+
 function Client() {
   const { user, setIsAuth, setUser } = useContext(AuthContext);
   const history = useHistory()
 
-  const [year,setYear]=useState("");
-  
+  const [year, setYear] = useState("");
+  const [downloadUrl, setDownloadUrl] = useState({
+    reportCertificatePath: "",
+    registrationCertificatePath: ""
+  })
 
   useEffect(() => {
 
@@ -29,20 +34,27 @@ function Client() {
       alert("error while logging out ");
     })
   }
-  var years=[];
-    var currentYear=(new Date()).getFullYear();
-    
-    var earliestYear=currentYear-10;
-    while(earliestYear<=currentYear){
+  var years = [];
+  var currentYear = (new Date()).getFullYear();
 
-      years.push(currentYear);
-      currentYear-=1;
-    }
-  
-    function handleChange(e){
-      setYear(e.target.value);
-    }
-  
+  var earliestYear = currentYear - 10;
+  while (earliestYear <= currentYear) {
+
+    years.push(currentYear);
+    currentYear -= 1;
+  }
+
+  function handleChange(e) {
+    setYear(e.target.value);
+
+    let url1 = user.reportCertificatePath.filter(ele => ele.includes(e.target.value))
+    let url2 = user.registrationCertificatePath.filter(ele => ele.includes(e.target.value))
+    setDownloadUrl({
+      reportCertificatePath: url1[0],
+      registrationCertificatePath: url2[0]
+    })
+  }
+
 
   return (
     user &&
@@ -78,28 +90,58 @@ function Client() {
               </div>
             </div>
             <div className="container client_header_content_buttons">
-              <Link to = "/auth/editprofile">
+              <Link to="/auth/editprofile">
                 <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
               </Link>
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
             </div>
           </div>
-        
-        <div className='container'>
-        <div className="row">
-        <button className="btn btn-2 col-lg-4"  style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Registration</strong></button>    
-        <select className="choose col-lg-3" id="ddlYears" onChange={handleChange}>
-            <option value=" ">Select Year</option>
-            {years.map(allYears=>{
-              return <option key={allYears} value={allYears}>{allYears}</option>
-            })}
-            </select>
-         
-        <button className="btn btn-2 col-lg-4" style={{ background: "#006400", color: "whitesmoke" }}><strong>Download Annual Report</strong></button>
-        </div>
-       
-        </div>
-        
+
+          <div className='container'>
+            <div className="row">
+
+              {
+                year ?
+                  <a className="btn btn-2 col-lg-4"
+                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.registrationCertificatePath}`} download target="_blank"
+                    style={{ background: "#006400", color: "whitesmoke" }}
+                  >
+                    <strong>Download Registration</strong>
+                  </a> :
+                  <button disabled className="btn btn-2 col-lg-4"
+                    style={{ background: "#006400", color: "whitesmoke" }}>
+                    <strong>Download Registration</strong>
+                  </button>
+              }
+
+
+              <select className="choose col-lg-3" id="ddlYears" onChange={handleChange}>
+                <option value=" ">Select Year</option>
+                {years.map(allYears => {
+                  return <option key={allYears} value={allYears}>{allYears}</option>
+                })}
+              </select>
+
+              {
+                year ?
+                  <a className="btn btn-2 col-lg-4"
+                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_self"
+                    style={year ?
+                      { background: "#006400", color: "whitesmoke" } :
+                      { cursor: "not-allowed" }
+                    }>
+                    <strong>Download Annual Report</strong>
+                  </a> :
+                  <button disabled className="btn btn-2 col-lg-4"
+                    style={{ background: "#006400", color: "whitesmoke" }}>
+                    <strong>Download Annual Report</strong>
+                  </button>
+              }
+
+            </div>
+
+          </div>
+
           <div className="card" >
             <div className="card-body">
               <div className=' client_header_content'>
@@ -124,16 +166,16 @@ function Client() {
               </div>
             </div>
           </div>
-         
+
         </div>
-       
+
         {/* certificate download btn  
         {
           user.certificatePath &&
           <a href={`${process.env.REACT_APP_BACKEND_URL}/api/resume_${user.certificatePath}`} download target="_blank"  >Download certificate</a>
         }
        */}
-      </div> :
+      </div > :
       <h1>You do have access to this page  </h1>
   );
 }
