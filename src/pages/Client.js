@@ -121,11 +121,10 @@ function Client() {
                   return <option key={allYears} value={allYears}>{allYears}</option>
                 })}
               </select>
-
               {
                 year ?
                   <a className="btn btn-2 col-lg-4"
-                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_self"
+                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                     style={year ?
                       { background: "#006400", color: "whitesmoke" } :
                       { cursor: "not-allowed" }
