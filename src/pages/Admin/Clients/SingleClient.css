@@ -1,9 +1,12 @@
 .title {
+  margin-top: 7px;
   color: #006400;
-  padding: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .btn {
   font-size: large;
+  margin-bottom: 10px;
 }
 .Single_header_content_buttons {
   padding: 10px;
@@ -17,21 +20,23 @@
   display: flex;
   height: 30px;
   font-size: medium;
+  margin-top: 0px;
 }
 .btn-1 {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: large;
   margin-top: 6px;
   align-items: center;
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 .Box {
-  height: 220px;
+  height: 350px;
   overflow: auto;
 }
-.Box > div{
+.Box > div {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -42,12 +47,29 @@
   font-weight: 400;
   margin: 7px 0;
 }
-
-
+.head {
+  text-align: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+.details {
+  /*margin: 10px;
+  padding: 10px;*/
+  margin-bottom: 0px;
+  color: #006400;
+}
 
 @media only screen and (max-width: 768px) {
-  .btn-1 {
-    margin-right: 170px;
+  .btn {
+    padding-right: 20px;
+    margin-right: 40px;
+    height: 90px;
+    width: auto;
+  }
+  .choose {
+    font-size: xx-small;
+    width: 90px;
+    margin-top: 10px;
   }
 }
 @media only screen and (max-width: 1580px) and (min-width: 800px) {

@@ -4,7 +4,7 @@
   z-index: 1000;
 }
 .medisurelogo {
-  height: 50px;
+  height: 60px;
   margin-right: 10px;
 }
 .medisure-brand {
@@ -34,7 +34,7 @@
     font-size: 20px !important;
   }
   .medisurelogo {
-    height: 30px;
+    height: 45px;
     margin-right: 5px;
   }
 }

@@ -45,7 +45,7 @@ function About() {
       >
         <Modal.Header closeButton>
         <img className="medisurelogo" src={logo} alt=""/>  
-          <Modal.Title style={{color:"#DD501D"}}>&nbsp;Medisure Incinerators</Modal.Title>
+          <Modal.Title style={{color:" #006400"}}>&nbsp;Medisure Incinerators</Modal.Title>
         </Modal.Header>
         <Modal.Body>
                   We have an incinerator of 100 kg/hr capacity with fully computerized, PLC
@@ -58,7 +58,7 @@ function About() {
                   collection and transportation of BMW.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} style={{background:"#DD501D" ,color:"white"}}>
+          <Button variant="secondary" onClick={handleClose} style={{background:" #006400" ,color:"white"}}>
            Read Less
           </Button>
          

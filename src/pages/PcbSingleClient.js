@@ -1,6 +1,8 @@
 import React, { useState , useContext , useEffect  } from 'react'
 import { AuthContext } from '../Context/AuthContext';
 import ServerService from '../ServerService'
+import './PcbSingleClient.css'
+
 
 function PcbSingleClient({match}) {
 
@@ -45,23 +47,36 @@ function PcbSingleClient({match}) {
 
 
     return (
-        <div style = {{paddingTop : '70px'}} >
+        <div>
+        <div style = {{paddingTop : '70px', paddingBottom:"0px",marginBottom:"10px",  display: "grid",
+        placeItems: "center",}} >
+             <div className="title" style={{marginBottom:"10px"}}> <h1 >{client.estbName}</h1></div>
+              <div className="container details">
+              <div className="card ">
+                      <div className="row col-lg-12 mx-auto ">
+                      <div className="col-sm-3"><strong>HCF Category :</strong>{client.hcf}</div>
+                      <div className="col-sm-4"><strong>Ownership Type :  </strong> {client.ownership}</div>
+                      <div className="col-sm -3"><strong>Number Of Beds :  </strong>{client.numberOfBeds}</div>
+                      <div className="col-sm-2"> <strong> City : </strong> {client.city}</div>
+                      </div>
             
-            {
-                client.email
-            }kjhfdjkdf
+                  </div>
+             </div>
+             </div>
+             <div className="container" style={{marginTop:"25px"}}>
             <div className="row">
-
-                <select className="choose col-lg-3" id="ddlYears" onChange={handleChange}>
+           <div className="col-md-4">
+                <select className="choose1" id="ddlYears" onChange={handleChange} style={{marginTop:"20px"}}>
                     <option value=" ">Select Year</option>
                     {years.map(allYears => {
                         return <option key={allYears} value={allYears}>{allYears}</option>
                     })}
                 </select>
-
+                </div>
+                <div className="col-md-8">
                 {
                     year ?
-                        <a className="btn btn-2 col-lg-4"
+                        <a className="btn1"
                             href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                             style={year ?
                                 { background: "#006400", color: "whitesmoke" } :
@@ -69,14 +84,14 @@ function PcbSingleClient({match}) {
                             }>
                             <strong>Download Annual Report</strong>
                         </a> :
-                        <button disabled className="btn btn-2 col-lg-4"
+                        <button disabled className="btn1"
                             style={{ background: "#006400", color: "whitesmoke" }}>
                             <strong>Download Annual Report</strong>
                         </button>
                 }
-
+           </div>
             </div>
-
+            </div>
 
 
 

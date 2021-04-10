@@ -92,9 +92,9 @@ function Client() {
             </div>
             <div className="container client_header_content_buttons">
               <Link to="/auth/editprofile">
-                <button className="btn " style={{ background: "#006400", color: "whitesmoke" }}>EDIT PROFILE</button>
+                <button className="btn btn2" style={{ background: "#006400", color: "whitesmoke",height:"55px" }}>EDIT PROFILE</button>
               </Link>
-              <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke" }}>LOGOUT</button>
+              <button onClick={logout} className="btn btn2" style={{ background: "#006400", color: "whitesmoke",height:"55px" }}>LOGOUT</button>
             </div>
           </div>
 
@@ -116,7 +116,7 @@ function Client() {
               }
 
 
-              <select className="choose col-lg-3" id="ddlYears" onChange={handleChange}>
+              <select className="choose2 col-lg-3" id="ddlYears" onChange={handleChange}>
                 <option value=" ">Select Year</option>
                 {years.map(allYears => {
                   return <option key={allYears} value={allYears}>{allYears}</option>
@@ -124,7 +124,7 @@ function Client() {
               </select>
               {
                 year && downloadUrl.reportCertificatePath ?
-                  <a className="btn btn-2 col-lg-4"
+                  <a className="btn-2 btn  col-lg-4"
                     href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                     style={year ?
                       { background: "#006400", color: "whitesmoke" } :
@@ -132,7 +132,7 @@ function Client() {
                     }>
                     <strong>Download Annual Report</strong>
                   </a> :
-                  <button disabled className="btn btn-2 col-lg-4"
+                  <button disabled className=" btn-2 btn col-lg-4"
                     style={{ background: "#006400", color: "whitesmoke" }}>
                     <strong>Download Annual Report</strong>
                   </button>

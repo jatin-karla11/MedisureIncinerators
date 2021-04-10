@@ -68,7 +68,7 @@ function Footer() {
       >
         <Modal.Header closeButton>
           <AccountBalanceIcon fontSize="large" />
-          <Modal.Title style={{color:"#DD501D"}}>&nbsp; Bank Details</Modal.Title>
+          <Modal.Title style={{color:" #006400"}}>&nbsp; Bank Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <div><strong>Bank Name : Bank Of Maharashtra</strong></div>
@@ -80,7 +80,7 @@ function Footer() {
         <div><strong>GSTIN : 23ADUPJ9656N3ZJ</strong></div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} style={{background:"#DD501D" ,color:"white"}}>
+          <Button variant="secondary" onClick={handleClose} style={{background:" #006400" ,color:"white"}}>
             Close
           </Button>
          

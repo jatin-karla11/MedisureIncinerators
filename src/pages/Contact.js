@@ -128,7 +128,7 @@ function Contact() {
                 onChange={e => setMessage(e.target.value)}
                 className="form-control" id="form-message" placeholder="Enter Your Message"></textarea>
             </div>
-            <button className="btn btn-dark" type="submit">Send <strong><i className="fas fa-greater-than"></i></strong></button>
+            <button className=" btn3btn btn-dark " type="submit">Send <strong><i className="fas fa-greater-than"></i></strong></button>
 
             <br />
             <br />

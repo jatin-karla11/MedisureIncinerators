@@ -12,7 +12,7 @@ function SingleClient({ location, match }) {
     const [file, setFile] = useState(null);
     const { setIsAuth } = useContext(AuthContext)
     const [year, setYear] = useState("");
-
+    console.log(client)
     useEffect(() => {
         ServerService.getSpecificClient({ "clientId": match.params.clientid }).then(result => {
             console.log(result.data.client)
@@ -35,6 +35,7 @@ function SingleClient({ location, match }) {
 
         if (type === "registration") {
             console.log("inside")
+           
             client.registrationCertificatePath.forEach(ele => {
                 if (ele.includes(year)) {
                     count = 0
@@ -96,23 +97,34 @@ function SingleClient({ location, match }) {
         }).catch(err => {
             console.log(err);
         })
-    }
 
+    }
+    console.log(client);
     return (
         client &&
         <div style={{
             display: "grid",
             placeItems: "center",
-            width: "100vw",
-            height: "100vh",
-            paddingTop: "10px"
+            paddingTop: "20px",
+            paddingBottom:"0px",
+            marginBottom:"35px",
         }}>
+             <div className="title" style={{marginBottom:"0px"}}> <h1 >{client.estbName}</h1></div>
+              <div className="container details">
+              <div className="card ">
+                      <div className="row col-lg-12 mx-auto ">
+                      <div className="col-sm-3"><strong>HCF Category :</strong>{client.hcf}</div>
+                      <div className="col-sm-4"><strong>Ownership Type :  </strong> {client.ownership}</div>
+                      <div className="col-sm -3"><strong>Number Of Beds :  </strong>{client.numberOfBeds}</div>
+                      <div className="col-sm-2"> <strong> City : </strong> {client.city}</div>
+                      </div>
+            
+                  </div>
+              </div>
             <div className="container">
-                <h1 className="title">{client.personName}</h1>
-
                 <div className="row">
                     <div className="col-md-6">
-                        <h1>Registration</h1>
+                        <h1 className="head">REGISTRATION</h1>
                         <div className="container">
                             <div className="card Box">
                                 {
@@ -129,7 +141,7 @@ function SingleClient({ location, match }) {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <h1>Annual Report</h1>
+                        <h1 className="head">ANNUAL REPORT</h1>
                         <div className="container">
                             <div className="card Box">
                                 {
@@ -159,6 +171,7 @@ function SingleClient({ location, match }) {
                             </>
                     }
                 </div>
+                <div className="container">
                 <div className="input-group">
                     <select className="choose" id="ddlYears" onChange={handleChange} > <option value=" ">Select Year</option>
                         {years.map(allYears => {
@@ -173,6 +186,7 @@ function SingleClient({ location, match }) {
 
                     </center>
 
+</div>
                 </div>
 
             </div>

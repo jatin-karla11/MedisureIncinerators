@@ -52,7 +52,7 @@ function PCB() {
               </div>
             </div>
             <div className="container pcb_header_content_buttons">
-              <Link to="/auth/pcb/clients"><button className="btn" style={{ background: "#006400", color: "whitesmoke", float: "left", alignItems: "left" }}>M clients</button></Link>
+              <Link to="/auth/pcb/clients"><button className="btn" style={{ background: "#006400", color: "whitesmoke", float: "left", alignItems: "left" }}>Medisure Incinerators clients</button></Link>
               <button onClick={logout} className="btn" style={{ background: "#006400", color: "whitesmoke", float: "right" }}>LOGOUT</button>
             </div>
           </div>
