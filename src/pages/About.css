@@ -3,11 +3,12 @@
 }
 .card-text {
   text-align: justify;
-  padding: 20px;
+  padding: 10px;
   width: auto;
   height: 90%;
   margin-bottom: 0px;
   font-size: 20px;
+  font-weight: 500;
 }
 
 /*.card {
@@ -64,13 +65,17 @@
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .card-text {
     text-align: justify;
-    padding: 20px;
+    padding: 5px;
     width: auto;
     height: 90%;
     font-size: 16px;
+    font-weight: 500;
   }
   .about_readmore {
     align-self: center;
     width: auto;
+  }
+  .modalMedisureI{
+    font-size:20px !important;
   }
 }

@@ -58,7 +58,7 @@ function Login({ location }) {
           </label>
           <input onChange={handleChange} name="password" value={input.password} type="password"></input>
         </div>
-        <button onClick={submit} >Log In</button>
+        <center><button className="mainLoginButton" onClick={submit} >Log In</button></center>
       </div>
     </div>
   );

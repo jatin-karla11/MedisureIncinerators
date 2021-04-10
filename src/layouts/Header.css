@@ -4,15 +4,18 @@
   z-index: 1000;
 }
 .medisurelogo {
-  height: 60px;
+  height: 50px;
   margin-right: 10px;
+  margin-top: -8px;
 }
 .medisure-brand {
+  font-size: 30px;
 }
 .navbar-brand {
   font-size: 26px !important;
   font-weight: 600 !important;
   color: rgb(33, 139, 143) !important;
+
 }
 .nav-item {
   font-size: 18px !important;
@@ -34,7 +37,11 @@
     font-size: 20px !important;
   }
   .medisurelogo {
-    height: 45px;
+    height: 40px;
     margin-right: 5px;
+    margin-top: -10px;
+  }
+  .medisure-brand {
+    font-size: 18px;
   }
 }

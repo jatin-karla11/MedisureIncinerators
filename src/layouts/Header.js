@@ -29,9 +29,9 @@ function Header() {
     <div className="header" id="headerid">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" style={{ cursor: "pointer" }} to="homeid">
+          <NavLink className="navbar-brand" style={{ cursor: "pointer",display:"flex" }} to="homeid">
             <img className="medisurelogo" src={logo} alt="" />
-            <span className="medisure-brand">Medisure Incinerators</span>
+            <div className="medisure-brand">Medisure Incinerators</div>
 
           </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

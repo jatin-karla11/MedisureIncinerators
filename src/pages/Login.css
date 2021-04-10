@@ -20,6 +20,21 @@
 .login_container_input{
     margin: 10px;
 }
+.mainLoginButton{
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s all ease-in-out;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+.mainLoginButton:hover{
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .login_container{
         padding: 10px;

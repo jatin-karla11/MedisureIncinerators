@@ -54,7 +54,7 @@ function SingleClient({ location, match }) {
         if (count) {
             ServerService.addCertificate(formdata).then(result => {
                 setClient(result.data.client)
-                alert("certificated is added ")
+                alert("Document Uploaded Successfully!")
             }).catch(err => {
                 console.log(err, "err in adding certificate ")
             })

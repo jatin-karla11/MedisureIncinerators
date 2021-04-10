@@ -45,9 +45,9 @@ function About() {
       >
         <Modal.Header closeButton>
         <img className="medisurelogo" src={logo} alt=""/>  
-          <Modal.Title style={{color:" #006400"}}>&nbsp;Medisure Incinerators</Modal.Title>
+          <Modal.Title style={{color:" #006400"}} className="modalMedisureI">&nbsp;Medisure Incinerators</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{textAlign:"justify",fontWeight:"500"}}>
                   We have an incinerator of 100 kg/hr capacity with fully computerized, PLC
                   controlled processing unit incorporated with automatic feeding system to treat incinerable
                   waste .To treat blue and red category waste we are equipped with computerized and PLC
