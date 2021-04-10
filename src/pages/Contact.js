@@ -91,7 +91,7 @@ function Contact() {
       <div className="row">
 
         <div className="col-md-6">
-          <div className="jumbotron"><h1>Contact Us </h1> </div>
+          <div className="jumbotron" style={{fontFamily:"RocknRoll One, cursive",alignItems:"center"}}><h1><strong>Contact Us </strong></h1> </div>
           <form className="my-form" onSubmit={sendMail}>
             <div className="form-group">
               <i className="fa fa-user icon">  </i>   &nbsp;&nbsp;
@@ -140,7 +140,7 @@ function Contact() {
 
 
         <div className="col-md-6">
-          <div className="jumbotron"><h1>Our Office</h1></div>
+          <div className="jumbotron" style={{fontFamily:"RocknRoll One, cursive",alignItems:"center"}}><h1><strong>Our Office</strong></h1></div>
 
           <div className="panel panel-default">
             <div className="text-center header">Our Office</div>

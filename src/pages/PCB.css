@@ -14,7 +14,12 @@
   font-size: 30px;
 }
 .pcb_header_content_buttons {
-  padding: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0px;
+  float: left;
+  font-size: medium;
 }
 
 .card {
@@ -24,4 +29,12 @@
   border: 4px solid black;
   background-color: #e0e0e0;
   padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .btnp {
+    padding: 0.5px;
+    margin-right: 25px;
+    width: 220px;
+    height: auto;
+  }
 }

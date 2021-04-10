@@ -53,11 +53,11 @@ function PcbSingleClient({match}) {
              <div className="title" style={{marginBottom:"10px"}}> <h1 >{client.estbName}</h1></div>
               <div className="container details">
               <div className="card ">
-                      <div className="row col-lg-12 mx-auto ">
-                      <div className="col-sm-3"><strong>HCF Category :</strong>{client.hcf}</div>
-                      <div className="col-sm-4"><strong>Ownership Type :  </strong> {client.ownership}</div>
-                      <div className="col-sm -3"><strong>Number Of Beds :  </strong>{client.numberOfBeds}</div>
-                      <div className="col-sm-2"> <strong> City : </strong> {client.city}</div>
+                      <div className="row col-lg-12 mx-auto "  style={{fontFamily:"Lato, cursive"}}>
+                      <div className="col-sm-3"><strong className= "black">HCF Category :</strong>{client.hcf}</div>
+                      <div className="col-sm-4"><strong className= "black">Ownership Type :  </strong> {client.ownership}</div>
+                      <div className="col-sm -3"><strong className= "black">Number Of Beds :  </strong>{client.numberOfBeds}</div>
+                      <div className="col-sm-2"> <strong className= "black"> City : </strong> {client.city}</div>
                       </div>
             
                   </div>

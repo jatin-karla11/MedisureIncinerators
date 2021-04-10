@@ -1,6 +1,12 @@
 @media only screen and (max-width: 768px) {
-  .btn {
+  .open {
+    float: left;
+    margin-top: 10px;
+  }
+  .delete {
     float: right;
+    margin-top: 10px;
+    width: 110px;
   }
 }
 
@@ -18,8 +24,15 @@
   margin: 0px;
 }
 
-.btn {
+.open {
   background: #006400;
   color: whitesmoke;
+  align-items: left;
+  padding: 5px;
+}
+
+.delete {
   align-items: right;
+  color: whitesmoke;
+  padding: 5px;
 }

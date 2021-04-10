@@ -112,7 +112,7 @@ function SingleClient({ location, match }) {
              <div className="title" style={{marginBottom:"0px"}}> <h1 >{client.estbName}</h1></div>
               <div className="container details">
               <div className="card ">
-                      <div className="row col-lg-12 mx-auto ">
+                      <div className="row col-lg-12 mx-auto" style={{fontFamily:"Lato, cursive"}} >
                       <div className="col-sm-3"><strong>HCF Category :</strong>{client.hcf}</div>
                       <div className="col-sm-4"><strong>Ownership Type :  </strong> {client.ownership}</div>
                       <div className="col-sm -3"><strong>Number Of Beds :  </strong>{client.numberOfBeds}</div>
@@ -162,12 +162,12 @@ function SingleClient({ location, match }) {
                     {
                         year && file ?
                             <>
-                                <button onClick={() => addCertificate('registration')} className="btn">Upload Registration</button>
-                                <button onClick={() => addCertificate('annualreport')} className="btn">Upload Annual Report</button>
+                                <button onClick={() => addCertificate('registration')} className="btn btnr">Upload Registration</button>
+                                <button onClick={() => addCertificate('annualreport')} className="btn btnr">Upload Annual Report</button>
                             </> :
                             <>
-                                <button disabled className="btn">Upload Registration</button>
-                                <button disabled className="btn">Upload Annual Report</button>
+                                <button disabled className="btn btnr">Upload Registration</button>
+                                <button disabled className="btn btnr">Upload Annual Report</button>
                             </>
                     }
                 </div>
@@ -178,8 +178,8 @@ function SingleClient({ location, match }) {
                             return <option key={allYears} value={allYears}>{allYears}</option>
                         })}
                     </select>
-                    <center>
-                        <input type="file" name="file" onChange={(e) => {
+                    <center >
+                        <input className="center" type="file" name="file" onChange={(e) => {
                             console.log(e.target.files)
                             setFile(e.target.files[0])
                         }} />

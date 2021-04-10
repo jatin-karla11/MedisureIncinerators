@@ -55,7 +55,7 @@ function Home() {
         />
       </div>
       <div className='home_values'>
-        <div className='page_title'>
+        <div className='page_title' style={{fontFamily:"Pacifico, cursive"}}>
           Values
             <hr className='titlehr'></hr>
         </div>
@@ -82,7 +82,7 @@ function Home() {
         </div>
       </div>
       <div className='about' id='aboutid'>
-        <div className='page_title'>
+        <div className='page_title' style={{fontFamily:"Pacifico, cursive"}}>
           About Us
             <hr className='titlehr'></hr>
         </div>
@@ -91,7 +91,7 @@ function Home() {
         </div>
       </div>
       <div className='services' id='serviceid'>
-        <div className='page_title'>
+        <div className='page_title' style={{fontFamily:"Pacifico, cursive"}}>
           Our Services
             <hr className='titlehr'></hr>
         </div>
@@ -187,24 +187,24 @@ function Home() {
           </div>
         </div> */}
       <div className='documents' id='documentid'>
-        <div className='page_title'>
+        <div className='page_title'  style={{fontFamily:"Pacifico, cursive"}}>
           Documents
             <hr className='titlehr'></hr>
         </div>
         <div className='documents_content'>
           {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
           <div className='documents_content_pdf'>
-            <a href={bmwpdf} target='_blank'>
+            <a href={bmwpdf} target='_blank' style={{fontFamily:"Pacifico, cursive"}}>
               "BMW Rules"
               </a>
           </div>
           <div className='documents_content_pdf'>
-            <a href={bmwpdf} target='_blank'>
+            <a href={bmwpdf} target='_blank' style={{fontFamily:"Pacifico, cursive"}}>
               "Environment Bulletin"
               </a>
           </div>
           <div className='documents_content_pdf'>
-            <a href={covid19guidelines} target='_blank'>
+            <a href={covid19guidelines} target='_blank'style={{fontFamily:"Pacifico, cursive"}}>
               "Covid-19 Guidelines"
               </a>
           </div>

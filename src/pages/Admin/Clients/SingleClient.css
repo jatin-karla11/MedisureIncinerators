@@ -8,6 +8,11 @@
   font-size: large;
   margin-bottom: 10px;
 }
+.btnr {
+  background-color: #006400;
+  color: whitesmoke;
+}
+
 .Single_header_content_buttons {
   padding: 10px;
   display: flex;
@@ -60,15 +65,19 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .btn {
-    padding-right: 20px;
-    margin-right: 40px;
-    height: 90px;
-    width: auto;
+  .btnr {
+    padding: 0.5px;
+    margin-right: 25px;
+    width: 180px;
+    height: auto;
   }
   .choose {
-    font-size: xx-small;
-    width: 90px;
+    font-size: small;
+    width: 100px;
+    margin-top: 10px;
+  }
+  .center {
+    margin-left: 10px;
     margin-top: 10px;
   }
 }
@@ -80,6 +89,9 @@
     margin-left: 20px;
     margin-right: 40px;
     width: 115px;
+  }
+  .center {
+    margin-left: 10px;
   }
 }
 .title {
