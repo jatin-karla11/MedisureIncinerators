@@ -11,7 +11,10 @@ function Admin() {
     ServerService.admin().then(result => {
       setIsAuth(result.data.status);
       setUser(result.data.user)
-    }).catch(err => console.log(err, "err in /client"))
+    }).catch(err =>{
+      history.push('/')
+      console.log(err, "err in /client")
+    })
   }, [])
 
   const logout = () => {

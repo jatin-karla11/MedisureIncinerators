@@ -77,5 +77,8 @@ export default {
     },
     deleteCertificate : (data)=>{
         return axios.post(`${url}/admin/delete-certificate`,data).then(res=>res)
+    },
+    deleteClient : (id)=>{
+        return axios.delete(`${url}/admin/delete-client?id=${id}`).then(res=>res)
     }
 }

@@ -1,11 +1,11 @@
-import React, { useState , useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 import ServerService from '../ServerService';
 import './Login.css';
 
 function Login({ location }) {
-  const {setUser} = useContext(AuthContext)
+  const { setUser } = useContext(AuthContext)
 
   const history = useHistory();
 
@@ -34,10 +34,7 @@ function Login({ location }) {
       else if (result.data.user.role === "pcb")
         history.push('/pcb');
 
-    }).catch(err => {
-       console.log(err , "eror ")
-    })
-
+    }).catch(err => alert('wrong username or password'))
   }
 
 

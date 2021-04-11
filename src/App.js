@@ -32,8 +32,8 @@ function App() {
         <Route exact path="/pcb" component={PCB} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/admin" component={Admin} />
-        <Route exact path = "/auth/admin/clients" component = {()=> <Clients url = {`/auth/admin/clients/`} /> } />
-        <Route exact path = "/auth/pcb/clients" component = {()=> <Clients url = {`/auth/pcb/clients/`} /> } />
+        <Route exact path = "/auth/admin/clients" component = {()=> <Clients deleteBtn = {true} url = {`/auth/admin/clients/`} /> } />
+        <Route exact path = "/auth/pcb/clients" component = {()=> <Clients deleteBtn = {false} url = {`/auth/pcb/clients/`} /> } />
         <Route path = "/auth/admin/clients/:clientid" component = {SingleClient} />
         <Route path = "/auth/pcb/clients/:clientid" component = {PcbSingleClient} />
 

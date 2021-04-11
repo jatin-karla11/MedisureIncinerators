@@ -10,14 +10,16 @@ function SingleClient({ location, match }) {
 
     const [client, setClient] = useState({});
     const [file, setFile] = useState(null);
-    const { setIsAuth } = useContext(AuthContext)
+    const { setIsAuth , setUser } = useContext(AuthContext)
     const [year, setYear] = useState("");
     console.log(client)
+
     useEffect(() => {
         ServerService.getSpecificClient({ "clientId": match.params.clientid }).then(result => {
             console.log(result.data.client)
             setIsAuth(result.data.status)
-            setClient(result.data.client)
+            setClient(result.data.client);
+            setUser(result.data.user)
         }).catch(err => {
             console.log(err, "err in")
         })
@@ -60,8 +62,6 @@ function SingleClient({ location, match }) {
             })
         }
     }
-
-
 
     var years = [];
     var currentYear = (new Date()).getFullYear();
@@ -130,10 +130,12 @@ function SingleClient({ location, match }) {
                                 {
                                     client.registrationCertificatePath && client.registrationCertificatePath.map((ele, idx) => {
                                         return (
-                                            <div>
+                                            <a
+                                            href={`${process.env.REACT_APP_BACKEND_URL}/api/${ele}`} download target="_blank"
+                                            >
                                                 <div>{ele}</div>
                                                 <DeleteOutlineIcon style={{ cursor: "pointer" }} onClick={() => deleteCertificate(ele, "registrationCertificatePath")} />
-                                            </div>
+                                            </a>
                                         )
                                     })
                                 }
@@ -147,10 +149,13 @@ function SingleClient({ location, match }) {
                                 {
                                     client.reportCertificatePath && client.reportCertificatePath.map((ele, idx) => {
                                         return (
-                                            <div>
+                                            <a
+                                            href={`${process.env.REACT_APP_BACKEND_URL}/api/${ele}`} download target="_blank"
+
+                                            >
                                                 <div>{ele}</div>
                                                 <DeleteOutlineIcon style={{ cursor: "pointer" }} onClick={() => deleteCertificate(ele, "reportCertificatePath")} />
-                                            </div>
+                                            </a>
                                         )
                                     })
                                 }

@@ -50,7 +50,7 @@ function Header() {
                     <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to={user.role === 'client' ? '/client' : user.role === 'admin' ? '/admin' : '/pcb'}>Dashboard</NavLink>
                     </li>
-                    < li onClick={logout} className="nav-item">
+                    <li onClick={logout} className="nav-item">
                     <div className="nav-link">LogOut</div>
                     </li>
 

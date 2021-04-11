@@ -23,7 +23,11 @@ function Client() {
     ServerService.client().then(result => {
       setIsAuth(result.data.status);
       setUser(result.data.user)
-    }).catch(err => console.log(err, "err in /client"))
+    }).catch(err => {
+      console.log(err, "err in /client")
+      history.push('/')
+    })
+
   }, [])
 
   const logout = () => {
@@ -49,7 +53,7 @@ function Client() {
 
     let url1 = user.reportCertificatePath.filter(ele => ele.includes(e.target.value))
     let url2 = user.registrationCertificatePath.filter(ele => ele.includes(e.target.value))
-    
+
     setDownloadUrl({
       reportCertificatePath: url1[0],
       registrationCertificatePath: url2[0]
@@ -61,13 +65,13 @@ function Client() {
     user &&
       user.role === "client" ?
       <div className='client'>
-        <div className="container client_header_title" style={{fontFamily:"Pacifico, cursive"}}><span className="welcome"> Welcome , </span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.estbName} </strong> </div>
+        <div className="container client_header_title" style={{ fontFamily: "Pacifico, cursive" }}><span className="welcome"> Welcome , </span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.estbName} </strong> </div>
         <div className="container">
           <div className="card" >
             <div className="card-body">
               <div className=' client_header_content'>
                 <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}> Organization details  :</h3>
-                <div className="row col-lg-12 mx-auto"  style={{fontFamily:"Lato, cursive"}}>
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }}>
                   <div className='col-lg-6'>
                     <strong>HCF Category : </strong>{user.hcf}
                   </div>
@@ -76,7 +80,7 @@ function Client() {
                     <strong> Ownership Type : </strong>  {user.ownership}
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{fontFamily:"Lato, cursive"}} >
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }} >
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
                     <strong>Number Of Beds : </strong> {user.numberOfBeds}
@@ -92,9 +96,9 @@ function Client() {
             </div>
             <div className="container client_header_content_buttons">
               <Link to="/auth/editprofile">
-                <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke",height:"35px",fontSize:"medium" }}>EDIT PROFILE</button>
+                <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke", height: "35px", fontSize: "medium" }}>EDIT PROFILE</button>
               </Link>
-              <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke",height:"35px",fontSize:"medium" }}>LOGOUT</button>
+              <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke", height: "35px", fontSize: "medium" }}>LOGOUT</button>
             </div>
           </div>
 
@@ -146,7 +150,7 @@ function Client() {
             <div className="card-body">
               <div className=' client_header_content'>
                 <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Authorized person details :</h3>
-                <div className="row col-lg-12 mx-auto"  style={{fontFamily:"Lato, cursive"}}>
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }}>
                   <div className='col-lg-6'>
                     <strong> Name : </strong>{user.personName}
                   </div>
@@ -155,7 +159,7 @@ function Client() {
                     <strong> Contact :  </strong>  {user.personContact}
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{fontFamily:"Lato, cursive"}} >
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }} >
                   <div className='col-lg-6'>
                     <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
                   </div>

@@ -20,6 +20,7 @@ function PcbSingleClient({match}) {
         console.log(result.data.client)
         setIsAuth(result.data.status)
         setClient(result.data.client)
+        setUser(result.data.user)
     }).catch(err => {
         console.log(err, "err in")
     })
@@ -75,7 +76,7 @@ function PcbSingleClient({match}) {
                 </div>
                 <div className="col-md-8">
                 {
-                    year ?
+                    year && downloadUrl.reportCertificatePath ?
                         <a className="btn1"
                             href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                             style={year ?
