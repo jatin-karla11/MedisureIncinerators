@@ -23,6 +23,7 @@ function Client() {
     ServerService.client().then(result => {
       setIsAuth(result.data.status);
       setUser(result.data.user)
+
     }).catch(err => {
       console.log(err, "err in /client")
       history.push('/')
@@ -33,6 +34,8 @@ function Client() {
   const logout = () => {
     ServerService.logout(user.role).then(response => {
       setIsAuth(false);
+      localStorage.removeItem('token')
+
       history.push("/")
     }).catch(err => {
       alert("error while logging out ");

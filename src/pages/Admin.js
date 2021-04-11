@@ -20,6 +20,8 @@ function Admin() {
   const logout = () => {
     ServerService.logout(user.role).then(response => {
       setIsAuth(false);
+      localStorage.removeItem('token')
+
       history.push("/")
     }).catch(err => {
       alert("error while logging out ");

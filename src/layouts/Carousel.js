@@ -57,6 +57,8 @@ function Carousel() {
   const logout = () => {
     ServerService.logout(user.role).then(result => {
       setIsAuth(result.data.status)
+      localStorage.removeItem('token')
+
     }).catch(err => {
       console.log("error while logging out ", err)
     })

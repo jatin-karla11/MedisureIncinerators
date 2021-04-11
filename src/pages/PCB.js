@@ -21,6 +21,8 @@ function PCB() {
   const logout = () => {
     ServerService.logout(user.role).then(response => {
       setIsAuth(false);
+      localStorage.removeItem('token')
+
       history.push("/");
     }
 
