@@ -53,10 +53,13 @@ function Contact() {
     console.log(data);
 
     ServerService.sendEmail(data).then(result => {
-      alert("Mail Sent")
+      // alert("Mail Sent")
       handleClick();
       resetForm();
-    }).catch(err => console.log(err, "err in /client"))
+    }).catch(err => {
+      alert("mail not sent");
+      console.log(err, "err in /client")
+    })
 
 
     /*axios.post('http://localhost:1337/form', data).then(res => {
