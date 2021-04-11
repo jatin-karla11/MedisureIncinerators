@@ -18,6 +18,7 @@ function Header() {
   const logout = () => {
     ServerService.logout(user.role).then(result => {
       setIsAuth(result.data.status);
+      localStorage.removeItem('token')
       history.push("/")
     }).catch(err => {
       console.log("error while logging out ", err)

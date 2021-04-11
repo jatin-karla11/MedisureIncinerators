@@ -26,6 +26,7 @@ function Login({ location }) {
   const submit = () => {
     ServerService.login(input).then(result => {
       console.log(result);
+      localStorage.setItem('token' , result.data.token)
       setUser(result.data.user)
       if (result.data.user.role === "client")
         history.push('/client');

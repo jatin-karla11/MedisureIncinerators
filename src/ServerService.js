@@ -7,78 +7,78 @@ console.log(url, "url");
 axios.defaults.withCredentials = true;
 
 
-// const authRequest = () => {
-//     const token = window.document.cookie.token;
+const authRequest = () => {
+    const token = localStorage.getItem('token');
 
-//     return Axios.create({
-//         baseURL: window.location.hostname === "localhost" ? "http://localhost:8000" : url,
-//         headers: {
-//             Authorization: `Bearer ${token}`
-//         }
-//     })
-// }
+    return axios.create({
+        baseURL: window.location.hostname === "localhost" ? "http://localhost:8000" : url,
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+}
 
 export default {
     login: (data) => {
-        return axios.post(`${url}/login`, data, { withCredentials: true }).then(data => data);
+        return authRequest().post(`${url}/login`, data, { withCredentials: true }).then(data => data);
     },
 
     register: (user) => {
-        return axios.post(`${url}/register`, user).then(data => data);
+        return authRequest().post(`${url}/register`, user).then(data => data);
     },
 
     logout: (user) => {
         console.log(user , "role")
-        return axios.get(`${url}/${user}/logout`).then(data => data);
+        return authRequest().get(`${url}/${user}/logout`).then(data => data);
     },
     // isAuthorized: (authurl, user) => {
-    //     return axios.post(`${url}`, user).then(res => {
+    //     return authRequest().post(`${url}`, user).then(res => {
     //         return res
     //     })
     // },
     isClientAuthorized: () => {
-        return axios.get(`${url}/client/auth`).then(res => res)
+        return authRequest().get(`${url}/client/auth`).then(res => res)
     },
     isAdminAuthorized: () => {
-        return axios.get(`${url}/admin/auth`).then(res => res)
+        return authRequest().get(`${url}/admin/auth`).then(res => res)
 
     },
     isPcbAuthorized: () => {
-        return axios.get(`${url}/pcb/auth`).then(res => res)
+        return authRequest().get(`${url}/pcb/auth`).then(res => res)
 
     },
     client: () => {
-        return axios.get(`${url}/client`).then(res => res)
+        return authRequest().get(`${url}/client`).then(res => res)
     },
     admin: () => {
-        return axios.get(`${url}/admin`).then(res => res)
+        return authRequest().get(`${url}/admin`).then(res => res)
     },
     pcb: () => {
-        return axios.get(`${url}/pcb`).then(res => res)
+        return authRequest().get(`${url}/pcb`).then(res => res)
     },
     
     home: () => {
-        return axios.get(`${url}/home`).then(res => res)
+        return authRequest().get(`${url}/home`).then(res => res)
     },
     getClients : () =>{
-        return axios.get(`${url}/auth/admin/get-clients`).then(res => res)
+        return authRequest().get(`${url}/auth/admin/get-clients`).then(res => res)
     },
     addCertificate : (data)=>{
-        return axios.post(`${url}/auth/admin/add-certificate` , data).then(res => res)
+        return authRequest().post(`${url}/auth/admin/add-certificate` , data).then(res => res)
     },
     getSpecificClient : (data)=>{
-        return axios.post(`${url}/auth/admin/get-client` , data).then(res => res)
+        return authRequest().post(`${url}/auth/admin/get-client` , data).then(res => res)
     },
     editProfile : (data)=>{
-        return axios.post(`${url}/auth/editprofile` , data).then(res => res)
+        return authRequest().post(`${url}/auth/editprofile` , data).then(res => res)
     },
     sendEmail:(data)=>{
-        return axios.post(`${url}/form`,data).then(res=>res)
+        return authRequest().post(`${url}/form`,data).then(res=>res)
     },
     deleteCertificate : (data)=>{
-        return axios.post(`${url}/admin/delete-certificate`,data).then(res=>res)
+        return authRequest().post(`${url}/admin/delete-certificate`,data).then(res=>res)
     },
     deleteClient : (id)=>{
-        return axios.delete(`${url}/admin/delete-client?id=${id}`).then(res=>res)
+        return authRequest().delete(`${url}/admin/delete-client?id=${id}`).then(res=>res)
     }
 }
