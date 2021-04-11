@@ -43,7 +43,7 @@ function Contact() {
   const sendMail = (e) => {
     e.preventDefault();
     // console.log(phone)
-    alert("working")
+    // alert("Mail Sent!")
     let data = {
       name: name,
       email: email,
@@ -53,7 +53,7 @@ function Contact() {
     console.log(data);
 
     ServerService.sendEmail(data).then(result => {
-      alert("mail sent")
+      alert("Mail Sent")
       handleClick();
       resetForm();
     }).catch(err => console.log(err, "err in /client"))

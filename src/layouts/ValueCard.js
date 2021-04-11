@@ -19,7 +19,7 @@ export default function ValueCard({ cardwcu, title, content }) {
       <div className="root_container">
         <img className="root_logo" src={cardwcu} alt="" />
         <div className="root_title">{title}</div>
-        <div className="root_content">{ readLess ? content : `${content.slice(-100)}....` }</div>
+        <div className="root_content">{ readLess ? content : `${content.slice(0,-50)}....` }</div>
       </div>
       <div className = "btn_div">
         {
