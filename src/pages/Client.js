@@ -73,17 +73,17 @@ function Client() {
           <div className="card" >
             <div className="card-body">
               <div className=' client_header_content'>
-                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}> Organization details  :</h3>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }}>
+                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Organization details:</h3>
+                <div className="row col-lg-12 mx-auto" >
                   <div className='col-lg-6'>
-                    <strong>HCF Category : </strong>{user.hcf}
+                    <strong>HCF Category:</strong>{user.hcf}
                   </div>
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
-                    <strong> Ownership Type : </strong>  {user.ownership}
+                    <strong>Ownership Type:</strong>  {user.ownership}
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }} >
+                <div className="row col-lg-12 mx-auto"  >
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
                     <strong>Number Of Beds : </strong> {user.numberOfBeds}
@@ -99,7 +99,7 @@ function Client() {
             </div>
             <div className="container client_header_content_buttons">
               <Link to="/auth/editprofile">
-                <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke", height: "35px", fontSize: "medium" }}>EDIT PROFILE</button>
+                <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke",  fontSize: "medium" }}>EDIT PROFILE</button>
               </Link>
               <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke", height: "35px", fontSize: "medium" }}>LOGOUT</button>
             </div>
@@ -153,16 +153,16 @@ function Client() {
             <div className="card-body">
               <div className=' client_header_content'>
                 <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Authorized person details :</h3>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }}>
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Arimo, sans-serif" }}>
                   <div className='col-lg-6'>
                     <strong> Name : </strong>{user.personName}
                   </div>
 
-                  <div className='col-lg-6'>
-                    <strong> Contact :  </strong>  {user.personContact}
+                  <div className='col-lg-6 phone'>
+                    <strong style={{fontSize:"20px"}}> Contact :  </strong>  {user.personContact}
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }} >
+                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Arimo, sans-serif" }} >
                   <div className='col-lg-6'>
                     <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
                   </div>

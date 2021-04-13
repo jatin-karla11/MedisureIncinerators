@@ -33,7 +33,7 @@
   background-color: #e0e0e0;
   padding: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .btn-2 {
     margin-left: 70px;
     width: 25px;
@@ -43,5 +43,14 @@
   .btn {
     width: 100px;
     height: 5px;
+  }
+  .admindetails {
+    font-family: "Arimo", sans-serif;
+  }
+  .name {
+    font-size: small;
+  }
+  .contact {
+    font-size: 13px;
   }
 }

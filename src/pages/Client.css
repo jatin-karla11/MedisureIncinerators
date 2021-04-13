@@ -1,5 +1,6 @@
 .client {
   padding-top: 60px;
+  font-family: "Arimo", sans-serif;
 }
 .client_header {
   margin-right: 125px;
@@ -40,6 +41,9 @@ td {
 .welcome {
   font-size: 30px;
 }
+.phone {
+  font-size: 25px;
+}
 .card {
   margin: 0 auto;
   float: none;
@@ -63,17 +67,21 @@ td {
 .row {
   display: flex;
 }
+.btnc {
+  height: 35px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 @media only screen and (max-width: 768px) {
   .btnc {
-    padding: 0.5px;
-    margin-right: 25px;
-    width: 220px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding: 1px;
+    margin-right: 30px;
+    width: auto;
     height: auto;
   }
-  .btn {
-    width: 100px;
-    height: 5px;
-  }
+
   .choose2 {
     margin-left: 70px;
     width: 225px;
@@ -88,5 +96,8 @@ td {
     padding-left: 0px;
     padding-top: 2%;
     padding-right: 0px;
+  }
+  .phone {
+    font-size: 13px;
   }
 }

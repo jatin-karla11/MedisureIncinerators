@@ -1,87 +1,88 @@
-.footer{
-    background: #e9ecef;
-    width: 100%;
+.footer {
+  background: #e9ecef;
+  width: 100%;
 }
-.footer_row{
+.footer_row {
   display: flex;
   /* margin: 0 auto; */
-
 }
 .whatsapp_icon {
-    color: black;
-    filter: drop-shadow(0px 7px 10px rgba(0, 0, 0, 0.25));
-    padding: 15px;
-    border-radius: 50%;
-    transition: 1s ease-in;
-    cursor: pointer;
-  }
-  
-  .whatsapp_icon:hover {
-    background-color: black;
-    color: white;
-  }
-  .footer_links{
-      display: flex;
-      justify-content: center;
-      padding: 50px;
+  color: black;
+  filter: drop-shadow(0px 7px 10px rgba(0, 0, 0, 0.25));
+  padding: 15px;
+  border-radius: 50%;
+  transition: 1s ease-in;
+  cursor: pointer;
+}
 
-  }
-  .footer_copyright{
-    /* display: flex; */
-    justify-content: center;
-    padding: 30px;
-    background: #d9dcdf;
-  }
-  
-  .footer_buttons{
-    font-weight: 500;
-    background: white;
+.whatsapp_icon:hover {
+  background-color: black;
+  color: white;
+}
+.footer_links {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+.footer_copyright {
+  /* display: flex; */
+  justify-content: center;
+  padding: 30px;
+  background: #d9dcdf;
+}
+
+.footer_buttons {
+  font-weight: 500;
+  background: white;
   transition: 0.5s;
   color: black;
   padding: 2px 20px;
   width: 180px;
   align-self: flex-end;
   border-radius: 5px;
-  }
-  .footer_buttons:hover{
-    background: black;
-    color: white;
-  }
-  .footer_button_div{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-  }
-  #bank{
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+}
+.footer_buttons:hover {
+  background: black;
+  color: white;
+}
+.footer_button_div {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#bank {
+  padding: 20px;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  #bank{
+  #bank {
     padding: 10px;
     margin-bottom: 20px;
     font-size: 14px;
   }
-  .footer_copyright{
+  .footer {
+    width: 100%;
+  }
+  .footer_copyright {
     /* display: flex; */
     justify-content: center;
     padding: 10px;
     background: #d9dcdf;
   }
-  .footer_row{
+  .footer_row {
     display: flex;
     flex-direction: column;
-    margin-left: 5px !important; 
+    margin-left: 5px !important;
   }
-  #reach-us{
+  #reach-us {
     display: none;
   }
-  .footer_links{
+  .footer_links {
     /* justify-content: inherit; */
     /* align-items: center; */
     padding: 20px;
   }
-  .footer_button_div{
+  .footer_button_div {
     /* flex-direction: column; */
     margin-bottom: 10px;
   }

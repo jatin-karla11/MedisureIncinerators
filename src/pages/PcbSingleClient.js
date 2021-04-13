@@ -1,4 +1,5 @@
 import React, { useState , useContext , useEffect  } from 'react'
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 import ServerService from '../ServerService'
 import './PcbSingleClient.css'
@@ -48,13 +49,13 @@ function PcbSingleClient({match}) {
 
 
     return (
-        <div>
+        <div className="style">
         <div style = {{paddingTop : '70px', paddingBottom:"0px",marginBottom:"10px",  display: "grid",
         placeItems: "center",}} >
              <div className="title" style={{marginBottom:"10px"}}> <h1 >{client.estbName}</h1></div>
               <div className="container details">
               <div className="card ">
-                      <div className="row col-lg-12 mx-auto "  style={{fontFamily:"Lato, cursive"}}>
+                      <div className="row col-lg-12 mx-auto " >
                       <div className="col-sm-3"><strong className= "black">HCF Category :</strong>{client.hcf}</div>
                       <div className="col-sm-4"><strong className= "black">Ownership Type :  </strong> {client.ownership}</div>
                       <div className="col-sm -3"><strong className= "black">Number Of Beds :  </strong>{client.numberOfBeds}</div>
@@ -77,15 +78,15 @@ function PcbSingleClient({match}) {
                 <div className="col-md-8">
                 {
                     year && downloadUrl.reportCertificatePath ?
-                        <a className="btn1"
+                        <a className="btn btn-2"
                             href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
                             style={year ?
-                                { background: "#006400", color: "whitesmoke" } :
+                                { background: "#006400", color: "whitesmoke",textDecoration:"none"} :
                                 { cursor: "not-allowed" }
                             }>
                             <strong>Download Annual Report</strong>
                         </a> :
-                        <button disabled className="btn1"
+                        <button disabled className="btn btn-2"
                             style={{ background: "#006400", color: "whitesmoke" }}>
                             <strong>Download Annual Report</strong>
                         </button>

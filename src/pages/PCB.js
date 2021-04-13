@@ -33,25 +33,25 @@ function PCB() {
     user &&
       user.role === "pcb" ?
       <div className='pcb'>
-        <div className="container pcb_header_title" style={{ fontFamily: "Pacifico, cursive" }}><span className="welcome"> Welcome ,</span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.personName} Your PCB login is Successful !! </strong>  </div>
+        <div className="container pcb_header_title" ><span className="welcome"> Welcome ,</span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.personName} Your PCB login is Successful !! </strong>  </div>
         <div className="container">
           <div className="card" >
             <div className="card-body">
               <div className='pcb_header_content'>
-                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline", fontFamily: "Fjalla One, sans-serif" }}> PCB Details :</h3>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }}>
+                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}> PCB Details:</h3>
+                <div className="row col-lg-12 mx-auto" >
                   <div className='col-lg-6'>
-                    <strong>Name : </strong>{user.personName}
+                    <strong className="name">Name: </strong>{user.personName}
                   </div>
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
-                    <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
+                    <strong>Email:</strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Lato, cursive" }} >
+                <div className="row col-lg-12 mx-auto"  >
                   <hr style={{ marginTop: "20px" }} />
-                  <div className='col-lg-6'>
-                    <strong>Contact No : </strong> {user.personContact}
+                  <div className='col-lg-6'className="contact">
+                    <strong style={{fontSize:"20px"}}>Contact No: </strong> {user.personContact}
                   </div>
                 </div>
               </div>

@@ -37,21 +37,21 @@ function Admin() {
           <div className="card" >
             <div className="card-body">
               <div className=' admin_header_content'>
-                <div className="admindetails" style={{fontFamily:"Fjalla One, sans-serif"}}>
+                <div className="admindetails">
                 <h3  style={{ color: "#006400", padding: "10px", textDecoration: "underline",alignItems:"center" }}> <strong>Admin Details : </strong></h3></div>
-                <div className="row col-lg-12 mx-auto"style={{fontFamily:"Lato, cursive"}}>
-                  <div className='col-lg-6' >
-                    <strong>Name : </strong>{user.personName}
+                <div className="row col-lg-12 mx-auto admindetails">
+                  <div className='col-lg-6 name' >
+                    <strong style={{ fontSize: "25px" }}>Name : </strong>{user.personName}
                   </div>
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
                     <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto" style={{fontFamily:"Lato, cursive"}} >
+                <div className="row col-lg-12 mx-auto admindetails" >
                   <hr style={{ marginTop: "20px" }} />
-                  <div className='col-lg-6'>
-                    <strong>Contact No : </strong> {user.personContact}
+                  <div className='col-lg-6 contact'>
+                    <strong style={{ fontSize: "25px" }}>Contact No : </strong> {user.personContact}
                   </div>
                 </div>
               </div>
