@@ -33,13 +33,13 @@ function PCB() {
     user &&
       user.role === "pcb" ?
       <div className='pcb'>
-        <div className="container pcb_header_title" ><span className="welcome"> Welcome ,</span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.personName} Your PCB login is Successful !! </strong>  </div>
+        <div className="container pcb_header_title Welcome" ><span > Welcome ,</span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.personName} Your PCB login is Successful !! </strong>  </div>
         <div className="container">
           <div className="card" >
             <div className="card-body">
-              <div className='pcb_header_content'>
-                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}> PCB Details:</h3>
-                <div className="row col-lg-12 mx-auto" >
+              <div className='pcb_header_content '>
+                <h3 className="pcbheading" style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}> PCB Details:</h3>
+                <div className="row col-lg-12 mx-auto style" >
                   <div className='col-lg-6'>
                     <strong className="name">Name: </strong>{user.personName}
                   </div>
@@ -50,15 +50,15 @@ function PCB() {
                 </div>
                 <div className="row col-lg-12 mx-auto"  >
                   <hr style={{ marginTop: "20px" }} />
-                  <div className='col-lg-6'className="contact">
-                    <strong style={{fontSize:"20px"}}>Contact No: </strong> {user.personContact}
+                  <div className="col-lg-6 contact style">
+                    <strong className="contact" style={{fontSize:"20px"}}>Contact No: </strong> <strong className="contact">{user.personContact}</strong>
                   </div>
                 </div>
               </div>
             </div>
             <div className="container pcb_header_content_buttons">
-              <Link to="/auth/pcb/clients"><button className="btn btnp" style={{ background: "#006400", color: "whitesmoke", float: "left", alignItems: "left", height: "35px", padding: "5px", fontSize: "medium" }}>Medisure Incinerators clients</button></Link>
-              <button onClick={logout} className="btn btnp" style={{ background: "#006400", color: "whitesmoke", float: "right", height: "35px", padding: "5px" }}>LOGOUT</button>
+              <Link to="/auth/pcb/clients"><button className="btn btnp" style={{ background: "#006400", color: "whitesmoke", float: "left", alignItems: "left" }}><strong className="btnp">Medisure Incinerators clients</strong></button></Link>
+              <button onClick={logout} className="btn btnp" style={{ background: "#006400", color: "whitesmoke", float: "right" }}><strong className="btnp">LOGOUT </strong></button>
             </div>
           </div>
         </div>

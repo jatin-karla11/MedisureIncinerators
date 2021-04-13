@@ -109,11 +109,11 @@ function SingleClient({ location, match }) {
              <div className="title" style={{marginBottom:"0px"}}> <h1 >{client.estbName}</h1></div>
               <div className="container details">
               <div className="card ">
-                      <div className="row col-lg-12 mx-auto style"  >
-                      <div className="col-sm-3"><strong>HCF Category :</strong>{client.hcf}</div>
-                      <div className="col-sm-4"><strong>Ownership Type :  </strong> {client.ownership}</div>
-                      <div className="col-sm -3"><strong>Number Of Beds :  </strong>{client.numberOfBeds}</div>
-                      <div className="col-sm-2"> <strong> City : </strong> {client.city}</div>
+                      <div className="row col-lg-12 mx-auto style designation"  >
+                      <div className="col-sm-3"><strong style={{color:"black"}}>HCF Category :</strong>{client.hcf}</div>
+                      <div className="col-sm-4 "><strong style={{color:"black"}}>Ownership Type :  </strong> {client.ownership}</div>
+                      <div className="col-sm -3"><strong style={{color:"black"}}>Number Of Beds :  </strong>{client.numberOfBeds}</div>
+                      <div className="col-sm-2"> <strong style={{color:"black"}}> City : </strong> {client.city}</div>
                       </div>
             
                   </div>

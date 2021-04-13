@@ -2,11 +2,12 @@
   .open {
     float: right;
     margin-top: 10px;
+    align-items: center;
+    text-align: center;
   }
   .delete {
     float: left;
     margin-top: 10px;
-    width: 110px;
   }
 }
 
@@ -28,11 +29,14 @@
   background: #006400;
   color: whitesmoke;
   align-items: right;
-  padding: 5px;
+  padding: 3px;
+  width: 220x;
+  margin: 10px;
 }
 
 .delete {
   align-items: left;
   color: whitesmoke;
-  padding: 5px;
+  padding: 3px;
+  margin: 10px;
 }

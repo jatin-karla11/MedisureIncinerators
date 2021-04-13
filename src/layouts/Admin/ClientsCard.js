@@ -37,11 +37,11 @@ function ClientsCard({ client, id, url, setClients, deleteBtn }) {
                         state: client
 
                     }}>
-                        <button className="btn open" style={{ height: "35px", padding: "5px", fontSize: "medium", marginRight: "10px" }} >Open Client</button>
+                        <button className="btn open" style={{ height: "35px", fontSize: "medium" }} >Open Client</button>
                     </Link>
                     {
                         deleteBtn &&
-                        <button onClick={() => deleteClient(client._id)} className="btn btn-danger delete" style={{ height: "35px", padding: "5px", fontSize: "medium" }}>Delete Client</button>
+                        <button onClick={() => deleteClient(client._id)} className="btn btn-danger delete" style={{ height: "35px", fontSize: "medium" }}>Delete Client</button>
                     }
 
                 </div>

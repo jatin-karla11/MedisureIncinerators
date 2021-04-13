@@ -29,7 +29,7 @@
   font-weight: bold;
 }
 .client_header_content_buttons {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -73,17 +73,27 @@ td {
   padding-bottom: 1px;
 }
 @media only screen and (max-width: 768px) {
+  .client {
+    font-size: small;
+  }
+  .style2 {
+    margin-left: 0%;
+    font-size: small;
+  }
   .btnc {
     padding-right: 1px;
     padding-left: 1px;
     padding: 1px;
-    margin-right: 30px;
-    width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 150px;
     height: auto;
+    align-items: center;
+    text-align: center;
   }
 
   .choose2 {
-    margin-left: 70px;
+    margin-left: 30px;
     width: 225px;
     align-items: center;
     height: auto;
@@ -91,13 +101,34 @@ td {
   .btn-2 {
     align-items: center;
     text-align: center;
+    padding: 0px;
     width: 225px;
-    height: 45px;
-    padding-left: 0px;
-    padding-top: 2%;
-    padding-right: 0px;
+    height: 35px;
+    margin-left: 30px;
+  }
+  .btn-title {
+    font-size: 18px;
   }
   .phone {
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card {
+    padding: 5px;
+  }
+  .heading2 {
+    font-size: 21px;
+    font-weight: bolder;
+  }
+  .heading3 {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .email {
+    font-size: 17px;
+  }
+  .designation {
+    font-size: 15px;
+    font-weight: 500;
   }
 }

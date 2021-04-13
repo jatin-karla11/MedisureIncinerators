@@ -68,13 +68,13 @@ function Client() {
     user &&
       user.role === "client" ?
       <div className='client'>
-        <div className="container client_header_title" style={{ fontFamily: "Pacifico, cursive" }}><span className="welcome"> Welcome , </span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.estbName} </strong> </div>
+        <div className="container client_header_title" ><span className="welcome"> Welcome , </span><strong style={{ color: "#006400", fontWeight: "1000" }}>{user.estbName} </strong> </div>
         <div className="container">
-          <div className="card" >
+          <div className="card">
             <div className="card-body">
-              <div className=' client_header_content'>
-                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Organization details:</h3>
-                <div className="row col-lg-12 mx-auto" >
+              <div className='client_header_content style2'>
+                <h3 className="heading2" style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Organization details:</h3>
+                <div className="row col-lg-12 mx-auto style" >
                   <div className='col-lg-6'>
                     <strong>HCF Category:</strong>{user.hcf}
                   </div>
@@ -83,7 +83,7 @@ function Client() {
                     <strong>Ownership Type:</strong>  {user.ownership}
                   </div>
                 </div>
-                <div className="row col-lg-12 mx-auto"  >
+                <div className="row col-lg-12 mx-auto style "  >
                   <hr style={{ marginTop: "20px" }} />
                   <div className='col-lg-6'>
                     <strong>Number Of Beds : </strong> {user.numberOfBeds}
@@ -101,11 +101,11 @@ function Client() {
               <Link to="/auth/editprofile">
                 <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke",  fontSize: "medium" }}>EDIT PROFILE</button>
               </Link>
-              <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke", height: "35px", fontSize: "medium" }}>LOGOUT</button>
+              <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke",  fontSize: "medium" }}>LOGOUT</button>
             </div>
           </div>
 
-          <div className='container'>
+          <div className='container '>
             <div className="row">
 
               {
@@ -114,11 +114,11 @@ function Client() {
                     href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.registrationCertificatePath}`} download target="_blank"
                     style={{ background: "#006400", color: "whitesmoke" }}
                   >
-                    <strong>Download Registration</strong>
+                    <strong className="btn-title">Download Registration</strong>
                   </a> :
                   <button disabled className="btn btn-2 col-lg-4"
                     style={{ background: "#006400", color: "whitesmoke" }}>
-                    <strong>Download Registration</strong>
+                    <strong className="btn-title">Download Registration</strong>
                   </button>
               }
 
@@ -137,11 +137,11 @@ function Client() {
                       { background: "#006400", color: "whitesmoke" } :
                       { cursor: "not-allowed" }
                     }>
-                    <strong>Download Annual Report</strong>
+                    <strong className="btn-title">Download Annual Report</strong>
                   </a> :
                   <button disabled className=" btn btn-2 col-lg-4"
                     style={{ background: "#006400", color: "whitesmoke" }}>
-                    <strong>Download Annual Report</strong>
+                    <strong className="btn-title">Download Annual Report</strong>
                   </button>
               }
 
@@ -149,24 +149,23 @@ function Client() {
 
           </div>
 
-          <div className="card" >
-            <div className="card-body">
-              <div className=' client_header_content'>
-                <h3 style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Authorized person details :</h3>
+          <div className="card " >
+            <div className="card-body style">
+              <div className=' client_header_content  style2'>
+                <h3 className="heading3" style={{ color: "#006400", padding: "10px", textDecoration: "underline" }}>Authorized person details:</h3>
                 <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Arimo, sans-serif" }}>
                   <div className='col-lg-6'>
                     <strong> Name : </strong>{user.personName}
                   </div>
-
-                  <div className='col-lg-6 phone'>
-                    <strong style={{fontSize:"20px"}}> Contact :  </strong>  {user.personContact}
+                  <div className='col-lg-6 phone '>
+                    <strong > Contact :  </strong>  {user.personContact}
                   </div>
                 </div>
                 <div className="row col-lg-12 mx-auto" style={{ fontFamily: "Arimo, sans-serif" }} >
-                  <div className='col-lg-6'>
-                    <strong>Email : </strong> <strong style={{ fontSize: "15px" }}>  {user.email}</strong>
+                  <div className='col-lg-6 email'>
+                    <strong>Email : </strong> <strong className="email">  {user.email}</strong>
                   </div>
-                  <div className='col-lg-6'>
+                  <div className='col-lg-6 designation'>
                     <strong>Designation :</strong>  {user.personDesignation}
                   </div>
                 </div>
