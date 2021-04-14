@@ -41,8 +41,9 @@
   background: #006400;
   transition: 0.5s;
   color: whitesmoke;
-  padding: 2px 20px;
-  width: 150px;
+  padding: 1px;
+  width: 175px;
+  height: auto;
   align-self: flex-end;
 }
 .about_readmore:hover {
