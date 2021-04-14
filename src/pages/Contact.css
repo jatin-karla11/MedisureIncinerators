@@ -16,8 +16,22 @@
 ipad {
   padding: 10px;
 }
+.stylec {
+  font-size: 15px;
+}
 .btn3 {
-  width: 90px;
-  height: auto;
-  color: #006400;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: 40px;
+  color: whitesmoke;
+  padding: 0px;
+}
+.send {
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .stylec {
+    font-size: 15px;
+  }
 }

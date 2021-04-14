@@ -93,10 +93,10 @@ function Contact() {
 
       <div className="row">
 
-        <div className="col-md-6">
-          <div className="jumbotron" style={{alignItems:"center"}}><h1><strong>Contact Us </strong></h1> </div>
+        <div className="col-md-6 ">
+          <div className="jumbotron" style={{alignItems:"center",textAlign:"center"}}><h4>Contact Us </h4> </div>
           <form className="my-form" onSubmit={sendMail}>
-            <div className="form-group">
+            <div className="form-group stylec">
               <i className="fa fa-user icon">  </i>   &nbsp;&nbsp;
                     <label htmlFor="form-name">Name</label>
               <input
@@ -105,7 +105,7 @@ function Contact() {
                 onChange={e => setName(e.target.value)}
                 type="name" className="form-control" id="form-name" placeholder="Name" required />
             </div>
-            <div className="form-group">
+            <div className="form-group stylec">
               <i className="fa fa-envelope icon ">  </i> &nbsp;&nbsp;
                     <label htmlFor="form-email">Email</label>
               <input
@@ -114,7 +114,7 @@ function Contact() {
                 onChange={e => setEmail(e.target.value)}
                 type="email" className="form-control" id="form-email" placeholder="Email Address" required />
             </div>
-            <div className="form-group">
+            <div className="form-group stylec">
               <i className="fas fa-phone"></i>&nbsp;&nbsp;
                     <label htmlFor="form-subject">Contact Number</label>
               <input
@@ -123,7 +123,7 @@ function Contact() {
                 onChange={e => setPhone(e.target.value)}
                 type="text" className="form-control" id="form-subject" placeholder="Enter Your Contact No." required />
             </div>
-            <div className="form-group">
+            <div className="form-group stylec">
               <label htmlFor="form-message">Email your Message</label>
               <textarea
                 name="message"
@@ -131,7 +131,7 @@ function Contact() {
                 onChange={e => setMessage(e.target.value)}
                 className="form-control" id="form-message" placeholder="Enter Your Message"></textarea>
             </div>
-            <button className=" btn3btn btn-dark " type="submit">Send <strong><i className="fas fa-greater-than"></i></strong></button>
+            <button className=" btn3 btn btn-dark " type="submit"><h4 className="send"> Send</h4></button>
 
             <br />
             <br />
@@ -143,23 +143,23 @@ function Contact() {
 
 
         <div className="col-md-6">
-          <div className="jumbotron" style={{alignItems:"center"}}><h1><strong>Our Office</strong></h1></div>
+          <div className="jumbotron" style={{alignItems:"center",textAlign:"center"}}><h4>Our Office</h4></div>
 
-          <div className="panel panel-default">
-            <div className="text-center header">Our Office</div>
+          <div className="panel panel-default ">
+            <div className="text-center header stylec">Our Office</div>
             <div className="panel-body text-center">
-              <h2><i className="far fa-map">  <strong>    Address </strong>   </i></h2>
+              <h5><i className="far fa-map">   Address    </i></h5>
               <h6>156/3/2 Bilankheda </h6>
               <h6>Khandwa</h6>
               <hr style={{ backgroundColor: "#808080" }} />
-
-              <h2><i className="fas fa-phone-alt">  <strong>    Phone </strong>   </i></h2>
+              
+              <h5><i className="fas fa-phone-alt"> Phone </i></h5>
               <h6><a href='tel:9424874278' style={{ color: "black" }}>+91 9424874278</a></h6>
               <h6><a href='tel:9424524041' style={{ color: "black" }}>+91 9424524041</a></h6>
               <hr style={{ backgroundColor: "#808080" }} />
 
 
-              <h2><i className="fa fa-envelope icon">  <strong>   Email</strong>   </i></h2>
+              <h5><i className="fa fa-envelope icon">    Email  </i></h5>
               <h6><a style={{ color: "black" }} href="mailto:medisureincinerators@gmail.com?Subject=Hello%20Medisure Incinerators">medisureincinerators@gmail.com</a></h6>
               {/* <h6>email@sitename.com </h6> */}
               <hr style={{ backgroundColor: "#808080" }} />
