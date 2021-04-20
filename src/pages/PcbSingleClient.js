@@ -79,7 +79,7 @@ function PcbSingleClient({match}) {
                 {
                     year && downloadUrl.reportCertificatePath ?
                         <a className="btn btn-2"
-                            href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
+                            href={`${process.env.REACT_APP_GCS_URL}/${downloadUrl.reportCertificatePath}`} download target="_blank"
                             style={year ?
                                 { background: "#006400", color: "whitesmoke",textDecoration:"none"} :
                                 { cursor: "not-allowed" }

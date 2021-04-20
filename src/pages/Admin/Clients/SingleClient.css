@@ -41,7 +41,7 @@
   height: 350px;
   overflow: auto;
 }
-.Box > a {
+.Box > div {
   text-decoration: none;
   color: black;
   display: flex;

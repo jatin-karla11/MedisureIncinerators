@@ -111,7 +111,7 @@ function Client() {
               {
                 year && downloadUrl.registrationCertificatePath ?
                   <a className="btn btn-2 col-lg-4"
-                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.registrationCertificatePath}`} download target="_blank"
+                    href={`${process.env.REACT_APP_GCS_URL}/${downloadUrl.registrationCertificatePath}`} download target="_blank"
                     style={{ background: "#006400", color: "whitesmoke" }}
                   >
                     <strong className="btn-title">Download Registration</strong>
@@ -132,7 +132,7 @@ function Client() {
               {
                 year && downloadUrl.reportCertificatePath ?
                   <a className="btn btn-2 col-lg-4"
-                    href={`${process.env.REACT_APP_BACKEND_URL}/api/${downloadUrl.reportCertificatePath}`} download target="_blank"
+                    href={`${process.env.REACT_APP_GCS_URL}/${downloadUrl.reportCertificatePath}`} download target="_blank"
                     style={year ?
                       { background: "#006400", color: "whitesmoke" } :
                       { cursor: "not-allowed" }
