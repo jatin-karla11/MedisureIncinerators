@@ -98,9 +98,9 @@ function Client() {
               </div>
             </div>
             <div className="container client_header_content_buttons">
-              <Link to="/auth/editprofile">
+              {/* <Link to="/auth/editprofile">
                 <button className="btn btnc" style={{ background: "#006400", color: "whitesmoke",  fontSize: "medium" }}>EDIT PROFILE</button>
-              </Link>
+              </Link> */}
               <button onClick={logout} className="btn btnc" style={{ background: "#006400", color: "whitesmoke",  fontSize: "medium" }}>LOGOUT</button>
             </div>
           </div>

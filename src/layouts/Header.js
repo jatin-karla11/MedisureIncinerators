@@ -30,7 +30,10 @@ function Header() {
     <div className="header" id="headerid">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" style={{ cursor: "pointer",display:"flex" }} to="homeid">
+          <NavLink className="navbar-brand" style={{ cursor: "pointer",display:"flex" }} 
+          // to="homeid"
+          to="/"
+          >
             <img className="medisurelogo" src={logo} alt="" />
             <div className="medisure-brand">Medisure Incinerators</div>
 
@@ -50,6 +53,9 @@ function Header() {
                   <>
                     <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to={user.role === 'client' ? '/client' : user.role === 'admin' ? '/admin' : '/pcb'}>Dashboard</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link" activeClassName="menu_active" to={'/documents'}>Documents</NavLink>
                     </li>
                     <li onClick={logout} className="nav-item">
                     <div className="nav-link">LogOut</div>

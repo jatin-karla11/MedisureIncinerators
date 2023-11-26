@@ -5,7 +5,7 @@ import ServerService from '../ServerService';
 import './Login.css';
 
 function Login({ location }) {
-  const { setUser } = useContext(AuthContext)
+  const { setUser, setIsAuth } = useContext(AuthContext)
 
   const history = useHistory();
 
@@ -28,8 +28,10 @@ function Login({ location }) {
       console.log(result);
       localStorage.setItem('token' , result.data.token)
       setUser(result.data.user)
+      setIsAuth(true)
       if (result.data.user.role === "client")
-        history.push('/client');
+        // history.push('/client');
+        history.push('/documents');
       else if (result.data.user.role === "admin")
         history.push('/admin');
       else if (result.data.user.role === "pcb")

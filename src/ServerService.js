@@ -18,7 +18,7 @@ const authRequest = () => {
     })
 }
 
-export default {
+const ServerService =  {
     login: (data) => {
         return authRequest().post(`/login`, data, { withCredentials: true }).then(data => data);
     },
@@ -80,5 +80,10 @@ export default {
     },
     deleteClient : (id)=>{
         return authRequest().delete(`/admin/delete-client?id=${id}`).then(res=>res)
+    },
+    getDocuments : (id)=>{
+        return authRequest().get(`/auth/documents`).then(res=>res)
     }
 }
+
+export default ServerService
