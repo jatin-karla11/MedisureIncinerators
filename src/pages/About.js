@@ -28,13 +28,9 @@ function About() {
             <div className='col-lg-7 mb-4'>
               <div className='card text'>
                 <p className='card-text'>
-                  Scientific disposal of Biomedical Waste through segregation,
-                  collection and treatment in an environmentally sound manner is
-                  our mission so as to minimise the adverse impact on health
-                  workers and on the environment. Our company has taken an
-                  initiative to aid in providing biomedical waste management
-                  services to health care facilities of Khandwa, Khargone, and
-                  Burhanpur districts.
+                  Disposal of Biomedical Waste through collection, segregation
+                   and treatment in an environmentally friendly manner is
+                  our mission so as to minimise the adverse impact on health and environment.
                 </p>
                 <button id="about_readmore" className="about_readmore" onClick={handleShow}>Read More  &nbsp; <i className="fas fa-greater-than"></i></button>
                 <Modal

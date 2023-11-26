@@ -51,9 +51,9 @@ function Header() {
                 isAuth ?
                   user &&
                   <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to={user.role === 'client' ? '/client' : user.role === 'admin' ? '/admin' : '/pcb'}>Dashboard</NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                       <NavLink className="nav-link" activeClassName="menu_active" to={'/documents'}>Documents</NavLink>
                     </li>

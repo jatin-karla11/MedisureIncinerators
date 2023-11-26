@@ -43,7 +43,8 @@ function Contact() {
   const sendMail = (e) => {
     e.preventDefault();
     // console.log(phone)
-    // alert("Mail Sent!")
+    alert("Feature coming soon!")
+    return; 
     let data = {
       name: name,
       email: email,
@@ -155,7 +156,6 @@ function Contact() {
               
               <h5><i className="fas fa-phone-alt"> Phone </i></h5>
               <h6><a href='tel:9424874278' style={{ color: "black" }}>+91 9424874278</a></h6>
-              <h6><a href='tel:9424524041' style={{ color: "black" }}>+91 9424524041</a></h6>
               <hr style={{ backgroundColor: "#808080" }} />
 
 

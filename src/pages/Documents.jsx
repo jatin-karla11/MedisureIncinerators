@@ -3,15 +3,15 @@ import ServerService from '../ServerService';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Documents = () => {
-  const [documents, setDocuments] = useState([]);
+  const [results, setResults] = useState([]);
   useEffect(() => {
     ServerService.getDocuments()
       .then((res) => {
         console.log(res);
-        setDocuments(res.data.documents);
+        setResults(res.data.documents);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err, 'error');
         alert('fail to fetch documents');
       });
   }, []);
@@ -29,31 +29,55 @@ const Documents = () => {
         Documents
         <hr className='titlehr'></hr>
       </div>
-      <h5 className='pl-4'>Manifesto Hazardous Waste</h5>
-      <div className='documents_content'>
-        {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
-        {documents?.map((doc) => (
+      {/* <h5 className='pl-4 mt-2'>Manifesto Hazardous Waste</h5> */}
+      {/* <div className='documents_content'> */}
+      {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
+      {/* {documents?.map((doc) => (
           <div key={`document${doc.id}`} className='documents_content_pdf'>
             <a href={doc.url} target='_blank'>
               {doc.name}
             </a>
           </div>
-        ))}
-      </div>
-      <Container>
+        ))} */}
+      {/* </div> */}
+      <Container fluid='sm'>
         <Row>
           {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
-          {documents?.map((doc) => (
-            <Col
-              lg={3}
-              key={`document${doc.id}`}
-              style={{ margin: 0 }}
-              className='documents_content_pdf'
-            >
-              <a href={doc.url} target='_blank'>
-                {doc.name}
-              </a>
-            </Col>
+          {results?.map(({ title, documents }) => (
+            <>
+              <h5 className='pl-4 mt-2'>{title}</h5>
+              {documents.map((doc) => {
+                return (
+                  <Col
+                    lg={3}
+                    sm={6}
+                    key={`document${doc.id}`}
+                    // className='m-2'
+                    // style={{ border: '1px solid' }}
+                  >
+                    <div
+                      // className='border border-2 border-black px-2 py-2 overflow-hidden '
+                      // style={{
+                      //   border: '1px solid',
+                      // }}
+                      className='documents_content_pdf w-100 overflow-hidden text-nowrap '
+                      style={{
+                        textOverflow: 'ellipsis',
+                      }}
+                    >
+                      <a
+                        title={doc.name}
+                        href={doc.url}
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        {doc.name}
+                      </a>
+                    </div>
+                  </Col>
+                );
+              })}
+            </>
           ))}
         </Row>
       </Container>

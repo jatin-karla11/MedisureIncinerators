@@ -26,7 +26,7 @@ function Signin() {
           <Link to={{
             pathname: "/login",
             whichLogin: "customer"
-          }}><button className="signin_container_div_button">Customer Login</button></Link>
+          }}><button className="signin_container_div_button">Department Login</button></Link>
         </div>
         {/* <div className='signin_container_div'>
           <Link to="/signup"><button className="signin_container_div_buttonsignup">Don't have an account? Register here!</button></Link>
