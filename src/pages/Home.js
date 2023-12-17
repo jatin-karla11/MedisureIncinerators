@@ -26,6 +26,7 @@ import sr from './pagesimages/sr.png';
 import Carousel from '../layouts/Carousel';
 import ServerService from '../ServerService';
 import { AuthContext } from '../Context/AuthContext';
+import Documents from './Documents';
 
 function Home() {
   const { user, setUser, setIsAuth, isAuth } = useContext(AuthContext);
@@ -186,12 +187,11 @@ function Home() {
           </div>
         </div> */}
       <div className='documents' id='documentid'>
-        <div className='page_title'>
+        {/* <div className='page_title'>
           Documents
           <hr className='titlehr'></hr>
-        </div>
-        <div className='documents_content'>
-          {/* <div className="documents_content_pdf"><a href={bmwpdf} target="_blank">"EC"</a></div> */}
+        </div> */}
+        {/* <div className='documents_content'>
           <div className='documents_content_pdf'>
             <a href={bmwpdf} target='_blank'>
               "BMW Rules"
@@ -207,7 +207,8 @@ function Home() {
               "Covid-19 Guidelines"
             </a>
           </div>
-        </div>
+        </div> */}
+        <Documents />
       </div>
       <div className='contact' id='contactid'>
         <Contact />

@@ -28,20 +28,24 @@ function App() {
   const { setIsAuth, setUser } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    ServerService.isClientAuthorized()
-      .then((response) => {
-        console.log(response, 'rspon');
-        const isAuth = response.data.status;
-        const user = response.data.user;
-        setIsAuth(isAuth);
-        setUser(user);
-        setIsLoading(false);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        console.log(error);
-      });
+    if (localStorage.getItem('token'))
+      ServerService.isClientAuthorized()
+        .then((response) => {
+          console.log(response, 'rspon');
+          const isAuth = response.data.status;
+          const user = response.data.user;
+          setIsAuth(isAuth);
+          setUser(user);
+          setIsLoading(false);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          setIsLoading(false);
+          console.log(error);
+        });
+    else {
+      setIsLoading(false);
+    }
   }, []);
 
   if (isLoading) {
