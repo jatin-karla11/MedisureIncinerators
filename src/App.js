@@ -22,7 +22,33 @@ import ServerService from './ServerService';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './Context/AuthContext';
 import { Spinner } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 axios.defaults.withCredentials = true;
+
+const NotFound = () => {
+  const history = useHistory();
+  return (
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <div>
+        <h1>Page Not Found</h1>
+        <button
+          onClick={() => {
+            history.push('/');
+          }}
+        >
+          Go to home
+        </button>
+      </div>
+    </div>
+  );
+};
 
 function App() {
   const { setIsAuth, setUser } = useContext(AuthContext);
@@ -67,7 +93,7 @@ function App() {
         <Route exact path='/pcb' component={PCB} />
         <Route exact path='/client' component={Client} />
         <Route exact path='/admin' component={Admin} />
-        <Route exact path='/documents' component={Documents} />
+        {/* <Route exact path='/documents' component={Documents} /> */}
         <Route
           exact
           path='/auth/admin/clients'
@@ -90,6 +116,7 @@ function App() {
         {/* <ProtectedRoute exact path="/client" component={Client}/> */}
         {/* <ProtectedAdminRoute exact path="/admin" component={Admin} /> */}
         {/* <Redirect to="/" /> */}
+        <Route path='*' component={NotFound} />
       </Switch>
       <Footer />
     </div>
