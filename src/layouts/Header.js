@@ -184,7 +184,7 @@ function Header() {
                     )}
                   </li>
 
-                  <li className='nav-item'>
+                  {/* <li className='nav-item'>
                     <NavLink
                       exact
                       className='nav-link'
@@ -194,7 +194,7 @@ function Header() {
                     >
                       Sign-In
                     </NavLink>
-                  </li>
+                  </li> */}
                 </>
               )}
             </ul>
